@@ -1,4 +1,215 @@
 /* =========================================
    ABA Demy Website
    Main Stylesheet
-   ========================================= */
+========================================= */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ---------- Variables ---------- */
+
+:root{
+
+    --primary:#14275B;
+
+    --background:#F5F0E4;
+
+    --white:#ffffff;
+
+    --text:#2f2f2f;
+
+    --border:#e4e4e4;
+
+}
+
+/* ---------- Body ---------- */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+/* ---------- Links ---------- */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ---------- Header ---------- */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 8%;
+
+    background:var(--white);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+header h2{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    font-weight:500;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ---------- Sections ---------- */
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 0;
+
+}
+
+/* ---------- Hero ---------- */
+
+section:first-of-type{
+
+    text-align:center;
+
+}
+
+section:first-of-type h1{
+
+    font-size:52px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+section:first-of-type p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+    font-size:20px;
+
+}
+
+/* ---------- Button ---------- */
+
+button{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.92;
+
+}
+
+/* ---------- Headings ---------- */
+
+h2{
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+/* ---------- Lists ---------- */
+
+ul{
+
+    padding-left:20px;
+
+}
+
+li{
+
+    margin-bottom:12px;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    background:var(--primary);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+    margin-top:60px;
+
+}
