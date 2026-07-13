@@ -1,215 +1,202 @@
-/* =========================================
-   ABA Demy Website
-   Main Stylesheet
-========================================= */
+<!DOCTYPE html>
+<html lang="en">
 
-/* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+<head>
 
-/* ---------- Reset ---------- */
+    <meta charset="UTF-8">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ---------- Variables ---------- */
+    <meta name="description"
+        content="ABA Demy - Applied Behavior Analysis Academy">
 
-:root{
+    <meta name="keywords"
+        content="ABA, Applied Behavior Analysis, Autism, Training, Academy">
 
-    --primary:#14275B;
+    <meta name="author" content="ABA Demy">
 
-    --background:#F5F0E4;
+    <title>ABA Demy | Applied Behavior Analysis Academy</title>
 
-    --white:#ffffff;
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    --text:#2f2f2f;
+</head>
 
-    --border:#e4e4e4;
+<body>
 
-}
+    <!-- =========================
+            HEADER
+    ========================== -->
 
-/* ---------- Body ---------- */
+    <header>
 
-body{
+        <div class="container">
 
-    font-family:'Poppins',sans-serif;
+            <nav class="navbar">
 
-    background:var(--background);
+                <div class="logo">
+                    <a href="#">ABA Demy</a>
+                </div>
 
-    color:var(--text);
+                <ul class="nav-links">
 
-    line-height:1.7;
+                    <li><a href="#">Home</a></li>
 
-}
+                    <li><a href="#">Programs</a></li>
 
-/* ---------- Links ---------- */
+                    <li><a href="#">About</a></li>
 
-a{
+                    <li><a href="#">Contact</a></li>
 
-    text-decoration:none;
+                </ul>
 
-    color:inherit;
+                <a href="#" class="btn-primary">
+                    Apply Now
+                </a>
 
-}
+            </nav>
 
-/* ---------- Header ---------- */
+        </div>
 
-header{
+    </header>
 
-    display:flex;
+    <!-- =========================
+            HERO SECTION
+    ========================== -->
 
-    justify-content:space-between;
+    <section class="hero">
 
-    align-items:center;
+        <div class="container">
 
-    padding:25px 8%;
+            <h1>
+                Become a Certified ABA Professional
+            </h1>
 
-    background:var(--white);
+            <p>
+                Professional training in Applied Behavior Analysis designed
+                to help practitioners, therapists, and educators develop
+                practical skills.
+            </p>
 
-    border-bottom:1px solid var(--border);
+            <a href="#" class="btn-primary">
+                Explore Programs
+            </a>
 
-}
+        </div>
 
-header h2{
+    </section>
 
-    color:var(--primary);
+    <!-- =========================
+            ABOUT
+    ========================== -->
 
-    font-size:30px;
+    <section class="about">
 
-}
+        <div class="container">
 
-nav{
+            <h2>About ABA Demy</h2>
 
-    display:flex;
+            <p>
+                ABA Demy is an educational academy specializing in
+                Applied Behavior Analysis (ABA), offering high-quality
+                training programs and practical learning experiences.
+            </p>
 
-    gap:35px;
+        </div>
 
-}
+    </section>
 
-nav a{
+    <!-- =========================
+            PROGRAMS
+    ========================== -->
 
-    font-weight:500;
+    <section class="programs">
 
-}
+        <div class="container">
 
-nav a:hover{
+            <h2>Featured Programs</h2>
 
-    color:var(--primary);
+            <div class="program-list">
 
-}
+                <div class="program-card">
+                    Program One
+                </div>
 
-/* ---------- Sections ---------- */
+                <div class="program-card">
+                    Program Two
+                </div>
 
-section{
+                <div class="program-card">
+                    Program Three
+                </div>
 
-    width:90%;
+            </div>
 
-    max-width:1200px;
+        </div>
 
-    margin:auto;
+    </section>
 
-    padding:80px 0;
+    <!-- =========================
+            WHY US
+    ========================== -->
 
-}
+    <section class="why-us">
 
-/* ---------- Hero ---------- */
+        <div class="container">
 
-section:first-of-type{
+            <h2>Why Choose ABA Demy?</h2>
 
-    text-align:center;
+            <ul>
 
-}
+                <li>Certified Instructors</li>
 
-section:first-of-type h1{
+                <li>International Curriculum</li>
 
-    font-size:52px;
+                <li>Practical Learning Experience</li>
 
-    color:var(--primary);
+                <li>Flexible Online Learning</li>
 
-    margin-bottom:25px;
+            </ul>
 
-}
+        </div>
 
-section:first-of-type p{
+    </section>
 
-    max-width:750px;
+    <!-- =========================
+            TESTIMONIALS
+    ========================== -->
 
-    margin:auto;
+    <section class="testimonials">
 
-    margin-bottom:35px;
+        <div class="container">
 
-    font-size:20px;
+            <h2>Student Testimonials</h2>
 
-}
+            <p>
+                "Excellent learning experience with professional instructors."
+            </p>
 
-/* ---------- Button ---------- */
+        </div>
 
-button{
+    </section>
 
-    background:var(--primary);
+    <!-- =========================
+            FOOTER
+    ========================== -->
 
-    color:white;
+    <footer>
 
-    border:none;
+        <div class="container">
 
-    padding:15px 40px;
+            <p>
+                © 2026 ABA Demy. All Rights Reserved.
+            </p>
 
-    border-radius:8px;
+        </div>
 
-    font-size:17px;
+    </footer>
 
-    cursor:pointer;
+    <script src="assets/js/script.js"></script>
 
-    transition:.3s;
+</body>
 
-}
-
-button:hover{
-
-    transform:translateY(-2px);
-
-    opacity:.92;
-
-}
-
-/* ---------- Headings ---------- */
-
-h2{
-
-    color:var(--primary);
-
-    margin-bottom:25px;
-
-}
-
-/* ---------- Lists ---------- */
-
-ul{
-
-    padding-left:20px;
-
-}
-
-li{
-
-    margin-bottom:12px;
-
-}
-
-/* ---------- Footer ---------- */
-
-footer{
-
-    background:var(--primary);
-
-    color:white;
-
-    text-align:center;
-
-    padding:35px;
-
-    margin-top:60px;
-
-}
+</html>
