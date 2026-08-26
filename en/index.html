@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
+    <meta name="description" data-cms-attr="content:meta.description"
         content="ABA Demy — an academy training Applied Behavior Analysis professionals in Syria, with internationally aligned programs and supervision by certified behavior analysts.">
-    <meta name="keywords" content="Applied Behavior Analysis, ABA, Autism, Training, Syria, ABAT, QASP-S">
+    <meta name="keywords" data-cms-attr="content:meta.keywords" content="Applied Behavior Analysis, ABA, Autism, Training, Syria, ABAT, QASP">
     <meta name="author" content="ABA Demy">
-    <title>ABA Demy | Applied Behavior Analysis Academy</title>
+    <title data-cms="meta.title">ABA Demy | Applied Behavior Analysis Academy</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,27 +17,95 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body class="ltr">
+<body class="ltr" data-content-base="../">
+
+    <!-- ICON SPRITE (referenced via <use> — keeps icons CMS-friendly) -->
+    <svg style="display:none" aria-hidden="true">
+        <symbol id="icon-training" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5"/>
+        </symbol>
+        <symbol id="icon-content" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 6C10 4.5 7 4 4 4v13c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2Z"/><path d="M12 6v13"/>
+        </symbol>
+        <symbol id="icon-practice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>
+        </symbol>
+        <symbol id="icon-community" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17.5" cy="9" r="2.3"/><path d="M16 14.2c2.8.4 5 2.4 5 5.8"/>
+        </symbol>
+        <symbol id="icon-programs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/>
+        </symbol>
+        <symbol id="icon-library" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="4" height="16" rx="1"/><rect x="9" y="4" width="4" height="16" rx="1"/><rect x="15" y="4" width="6" height="16" rx="1"/>
+        </symbol>
+        <symbol id="icon-workshop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H9l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/>
+        </symbol>
+    </svg>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Your Cart">
+        <div class="cart-header">
+            <h3 data-cms="store_page.cart_title">Your Cart</h3>
+            <button type="button" class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items" data-empty-label="Your cart is empty.">
+            <p class="cart-empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span data-cms="store_page.cart_total_label">Total</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <button type="button" class="btn-primary btn-block" id="cart-checkout-btn" data-cms="store_page.cart_checkout">Checkout via WhatsApp</button>
+            <button type="button" class="cart-clear-btn" id="cart-clear-btn" data-cms="store_page.cart_clear">Clear Cart</button>
+        </div>
+    </aside>
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="announce-bar" id="announce-bar">
+        <div class="announce-track" data-cms-list="banner.items">
+            <template>
+                <span data-cms="text"></span>
+            </template>
+            <span>Registration is now open for the first ABAT cohort — seats are limited</span>
+            <span>The QASP program launches soon for professionals seeking career advancement</span>
+            <span>Registration is now open for the first ABAT cohort — seats are limited</span>
+            <span>The QASP program launches soon for professionals seeking career advancement</span>
+        </div>
+        <button class="announce-close" id="announce-close" aria-label="Close">✕</button>
+    </div>
 
     <!-- HEADER -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">ABA Demy</a>
+                    <a href="index.html">
+                        <img src="../assets/images/icon-navy.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <span data-cms="brand.name">ABA Demy</span>
+                    </a>
                 </div>
 
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#why">Why Us</a></li>
-                    <li><a href="#register">Register</a></li>
+                    <li><a href="#home" data-cms="nav.home">Home</a></li>
+                    <li><a href="about.html" data-cms="nav.about">About</a></li>
+                    <li><a href="#programs" data-cms="nav.programs">Programs</a></li>
+                    <li><a href="store.html" data-cms="nav.store">Store</a></li>
+                    <li><a href="services.html" data-cms="nav.services">Services</a></li>
+                    <li><a href="library.html" data-cms="nav.library">Knowledge Library</a></li>
+                    <li><a href="contact.html" data-cms="nav.contact">Contact</a></li>
                 </ul>
 
                 <div class="nav-actions">
+                    <button type="button" class="cart-btn" id="cart-btn" aria-label="Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        <span class="cart-badge hidden" id="cart-badge">0</span>
+                    </button>
                     <a href="../index.html" class="lang-switch">ع</a>
-                    <a href="#register" class="btn-primary">Register Interest</a>
+                    <a href="#register" class="btn-primary" data-cms="nav.cta">Register Interest</a>
                 </div>
             </nav>
         </div>
@@ -46,17 +114,18 @@
     <!-- HERO -->
     <section class="hero" id="home">
         <div class="container">
-            <span class="eyebrow">Syria's first structured ABA training program</span>
-            <h1>Qualified Practitioners<br>for Children Who Deserve Early Intervention</h1>
-            <p>
+            <p class="brand-tagline" data-cms="brand.tagline">Knowledge that builds behavior.. and creates impact</p>
+            <span class="eyebrow" data-cms="hero.eyebrow">Syria's first structured ABA training program</span>
+            <h1 data-cms="hero.title_html" data-cms-html>Qualified Practitioners<br>for Children Who Deserve Early Intervention</h1>
+            <p data-cms="hero.paragraph">
                 We train behavior specialists able to deliver effective, evidence-based
                 interventions for children with autism spectrum disorder and developmental
                 disabilities — through internationally aligned programs supervised by
                 certified behavior analysts.
             </p>
             <div class="hero-actions">
-                <a href="#register" class="btn-primary">Start Your Career</a>
-                <a href="#programs" class="btn-ghost">View Programs</a>
+                <a href="#register" class="btn-primary" data-cms="hero.cta_primary">Start Your Career</a>
+                <a href="#programs" class="btn-ghost" data-cms="hero.cta_secondary">View Programs</a>
             </div>
         </div>
     </section>
@@ -64,7 +133,13 @@
     <!-- STATS STRIP -->
     <section class="stats">
         <div class="container">
-            <div class="stats-grid">
+            <div class="stats-grid" data-cms-list="stats">
+                <template>
+                    <div class="stat">
+                        <span class="stat-num" data-cms="number"></span>
+                        <span class="stat-label" data-cms="label"></span>
+                    </div>
+                </template>
                 <div class="stat">
                     <span class="stat-num">40</span>
                     <span class="stat-label">Hours of theory</span>
@@ -85,18 +160,50 @@
         </div>
     </section>
 
+    <!-- PLATFORM FEATURES -->
+    <section class="platform-features">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="platform_features.eyebrow">ABA Demy</span>
+            <h2 data-cms="platform_features.title">More Than a Training Platform</h2>
+            <div class="platform-features-grid" data-cms-list="platform_features.items">
+                <template>
+                    <div class="pf-item">
+                        <span class="pf-icon"><svg><use data-cms-attr="href:icon"></use></svg></span>
+                        <span data-cms="title"></span>
+                    </div>
+                </template>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-training"></use></svg></span>
+                    <span>Specialized Training</span>
+                </div>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-content"></use></svg></span>
+                    <span>Scientific Content</span>
+                </div>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-practice"></use></svg></span>
+                    <span>Practical Application</span>
+                </div>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-community"></use></svg></span>
+                    <span>Professional Community</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
-            <span class="section-eyebrow">About</span>
-            <h2>Training built on scientific foundations</h2>
-            <p class="lead">
-                ABA Demy is an academy dedicated to developing and empowering professionals,
-                families, and institutions serving individuals with developmental disabilities
-                and autism spectrum disorder — through Applied Behavior Analysis programs built
-                on the latest scientific and practical methods.
+            <span class="section-eyebrow" data-cms="about.eyebrow">About</span>
+            <h2 data-cms="about.title">Training built on scientific foundations</h2>
+            <p class="lead" data-cms="about.lead">
+                ABA Demy is an Arabic-language platform specialized in Applied Behavior Analysis,
+                combining specialized training, scientific resources, and a professional
+                community — to meet practitioners' needs and support families with services and
+                consultations grounded in best practice.
             </p>
-            <p>
+            <p data-cms="about.paragraph">
                 Our model combines live theoretical instruction, hands-on supervision, and
                 continuous professional assessment in line with international standards. It is
                 delivered by internationally certified Syrian experts who bring global expertise
@@ -105,13 +212,92 @@
         </div>
     </section>
 
+    <!-- PHILOSOPHY -->
+    <section class="philosophy">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="philosophy.eyebrow">Our Philosophy</span>
+            <h2 data-cms="philosophy.title_html" data-cms-html>Knowledge doesn't end at learning..<br>it begins at application</h2>
+            <div class="philosophy-grid" data-cms-list="philosophy.items">
+                <template>
+                    <div class="philosophy-item">
+                        <span class="ph-label" data-cms="label"></span>
+                        <p data-cms="text"></p>
+                    </div>
+                </template>
+                <div class="philosophy-item">
+                    <span class="ph-label">Science</span>
+                    <p>Everything we offer is grounded in evidence-based practice.</p>
+                </div>
+                <div class="philosophy-item">
+                    <span class="ph-label">Application</span>
+                    <p>We focus on turning knowledge into applicable skills.</p>
+                </div>
+                <div class="philosophy-item">
+                    <span class="ph-label">Impact</span>
+                    <p>Our goal is to raise service quality and improve the lives of those we serve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERINGS -->
+    <section class="offerings">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="offerings.eyebrow">What We Offer</span>
+            <h2 data-cms="offerings.title">Everything a practitioner and family need, in one place</h2>
+            <div class="offerings-grid" data-cms-list="offerings.items">
+                <template>
+                    <div class="offering-card">
+                        <span class="offering-icon"><svg><use data-cms-attr="href:icon"></use></svg></span>
+                        <h4 data-cms="title"></h4>
+                        <p data-cms="description"></p>
+                    </div>
+                </template>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-programs"></use></svg></span>
+                    <h4>Specialized Training Programs</h4>
+                    <p>In Applied Behavior Analysis, including the ABAT and QASP programs.</p>
+                </div>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-library"></use></svg></span>
+                    <h4>Knowledge Library</h4>
+                    <p>Guides and educational materials supporting continuous learning and professional growth.</p>
+                </div>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-workshop"></use></svg></span>
+                    <h4>Interactive Workshops & Discussions</h4>
+                    <p>Carrying knowledge from theory into hands-on practice.</p>
+                </div>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-community"></use></svg></span>
+                    <h4>Professional Community</h4>
+                    <p>Connecting specialists and families to exchange expertise and strengthen collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PROGRAMS -->
     <section class="programs" id="programs">
         <div class="container">
-            <span class="section-eyebrow">A tiered career path</span>
-            <h2>Training Programs</h2>
+            <span class="section-eyebrow" data-cms="programs.eyebrow">A tiered career path</span>
+            <h2 data-cms="programs.title">Training Programs</h2>
 
-            <div class="program-list">
+            <div class="program-list" data-cms-list="programs.items">
+                <template>
+                    <div class="program-card">
+                        <div class="program-tag" data-cms="tag"></div>
+                        <h3 data-cms="name"></h3>
+                        <div class="program-code" data-cms="code"></div>
+                        <p data-cms="description"></p>
+                        <ul class="program-features" data-cms-list="features">
+                            <template>
+                                <li data-cms="text"></li>
+                            </template>
+                        </ul>
+                        <a href="#register" class="btn-primary btn-block" data-cms="cta"></a>
+                    </div>
+                </template>
 
                 <div class="program-card active">
                     <div class="program-tag">Level One · Available now</div>
@@ -133,12 +319,12 @@
 
                 <div class="program-card">
                     <div class="program-tag muted">Advanced Level · Coming soon</div>
-                    <h3>Qualified Autism Services Practitioner</h3>
-                    <div class="program-code">QASP-S</div>
+                    <h3>Qualified Applied Behavior Analysis Specialist</h3>
+                    <div class="program-code">QASP</div>
                     <p>
-                        The intermediate level qualifying practitioners to supervise technicians
-                        and develop behavior programs, with a higher tier of training. Launches
-                        in phase two after the first cohort succeeds.
+                        An advanced professional program for practitioners who want to deepen
+                        their knowledge and skills in Applied Behavior Analysis and move to a
+                        higher tier of professional competency under recognized frameworks.
                     </p>
                     <ul class="program-features">
                         <li>Supervising behavior technicians</li>
@@ -147,7 +333,6 @@
                     </ul>
                     <a href="#register" class="btn-ghost btn-block">Register early interest</a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -155,16 +340,22 @@
     <!-- WHY US -->
     <section class="why-us" id="why">
         <div class="container">
-            <span class="section-eyebrow">Why ABA Demy</span>
-            <h2>Balancing international standards with local reality</h2>
-            <div class="why-grid">
+            <span class="section-eyebrow" data-cms="why.eyebrow">Why ABA Demy</span>
+            <h2 data-cms="why.title">Balancing international standards with local reality</h2>
+            <div class="why-grid" data-cms-list="why.items">
+                <template>
+                    <div class="why-item">
+                        <h4 data-cms="title"></h4>
+                        <p data-cms="description"></p>
+                    </div>
+                </template>
                 <div class="why-item">
                     <h4>International alignment</h4>
                     <p>Programs built on the requirements of international ABA credentialing bodies.</p>
                 </div>
                 <div class="why-item">
                     <h4>Certified supervision</h4>
-                    <p>Delivered under a certified behavior analyst (BCBA) and a certified autism supervisor (QASP-S).</p>
+                    <p>Delivered under a certified behavior analyst (BCBA) and a certified autism supervisor (QASP).</p>
                 </div>
                 <div class="why-item">
                     <h4>Arabic content</h4>
@@ -178,15 +369,63 @@
         </div>
     </section>
 
-    <!-- IMPACT -->
-    <section class="impact">
+    <!-- ACCREDITATION -->
+    <section class="accreditation">
         <div class="container">
-            <blockquote>
-                Amid a severe shortage of evidence-based rehabilitation services and trained
-                staff, we are building a professional base that restores to children and their
-                families the chance of early intervention — the single most important factor in
-                improving their long-term outcomes.
-            </blockquote>
+            <div class="accreditation-text">
+                <h3 data-cms="accreditation.title">Internationally accredited</h3>
+                <p data-cms="accreditation.description">Our training programs are delivered by an organization officially recognized by the QABA American board as an Approved Coursework/Training Provider.</p>
+            </div>
+            <div class="accreditation-badges">
+                <img src="../assets/images/qaba-badge-1.jpeg" alt="QABA Approved Coursework Provider">
+                <img src="../assets/images/qaba-badge-2.jpeg" alt="QABA Approved Training Program">
+            </div>
+        </div>
+    </section>
+
+    <!-- ORIGIN -->
+    <section class="origin">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="origin.eyebrow">Why ABA Demy Was Founded</span>
+            <h2 data-cms="origin.title">A story that began from a real need</h2>
+            <div class="origin-track" data-cms-list="origin.items">
+                <template>
+                    <div class="origin-step">
+                        <span class="origin-num" data-cms="step"></span>
+                        <h4 data-cms="label"></h4>
+                        <p data-cms="text"></p>
+                    </div>
+                </template>
+                <div class="origin-step">
+                    <span class="origin-num">01</span>
+                    <h4>The Reality</h4>
+                    <p>Amid rising demand for evidence-based interventions in Syria, there is a clear shortage of specialized training, Arabic-language resources, and professional services that practitioners and families need.</p>
+                </div>
+                <div class="origin-step">
+                    <span class="origin-num">02</span>
+                    <h4>The Challenge</h4>
+                    <p>Practitioners faced limited opportunities for professional development and specialized qualification, while families struggled to access professional services to support their children with developmental disabilities early on.</p>
+                </div>
+                <div class="origin-step">
+                    <span class="origin-num">03</span>
+                    <h4>This Is Where ABA Demy Began</h4>
+                    <p>To become one of the first specialized platforms in Syria, bringing together specialized training, educational resources, professional supervision, and family support services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT TEASER -->
+    <section class="assessment-teaser-section">
+        <div class="container">
+            <div class="assessment-teaser">
+                <div class="assessment-teaser-text">
+                    <span class="section-eyebrow" data-cms="assessment_teaser.eyebrow">Before You Register</span>
+                    <h2 data-cms="assessment_teaser.title">Test Your Professional Readiness First</h2>
+                    <p data-cms="assessment_teaser.description">Answer a few short questions to find out your current knowledge level in Applied Behavior Analysis and how ready you are to join the ABAT program — your result is sent to your email.</p>
+                </div>
+                <a href="assessment.html" class="btn-primary" data-cms="assessment_teaser.cta">Start the Assessment</a>
+            </div>
         </div>
     </section>
 
@@ -195,20 +434,21 @@
         <div class="container">
             <div class="register-wrap">
                 <div class="register-intro">
-                    <span class="section-eyebrow light">Register</span>
-                    <h2>Register your interest</h2>
-                    <p>
+                    <span class="section-eyebrow light" data-cms="register.eyebrow">Register</span>
+                    <h2 data-cms="register.title">Register your interest</h2>
+                    <p data-cms="register.description">
                         Fill in the form and our team will reach out with program details and
                         upcoming cohort dates. Seats are limited (15 trainees per cohort).
                     </p>
-                    <a href="https://wa.me/966551538431" class="whatsapp-link" target="_blank" rel="noopener">
+                    <a href="https://wa.me/966551538431" class="whatsapp-link" target="_blank" rel="noopener"
+                        data-cms="register.whatsapp_label" data-cms-attr="href:contact.whatsapp_url">
                         Or contact us directly on WhatsApp
                     </a>
                 </div>
 
                 <form class="register-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="5b5fd8d2-0c97-4e56-983d-db5016750f2a">
-                    <input type="hidden" name="subject" value="New Registration — ABA Demy">
+                    <input type="hidden" name="subject" value="New Registration — ABA Demy" data-cms-attr="value:register.form_subject">
                     <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
                     <div class="field">
@@ -236,7 +476,7 @@
                             <label for="program">Program</label>
                             <select id="program" name="Program" required>
                                 <option value="ABAT">ABAT Technician</option>
-                                <option value="QASP-S">QASP-S Supervisor (soon)</option>
+                                <option value="QASP">QASP Specialist (soon)</option>
                             </select>
                         </div>
                     </div>
@@ -248,7 +488,7 @@
                     </div>
 
                     <button type="submit" class="btn-primary btn-block">Submit request</button>
-                    <p class="form-note">We won't share your data with any third party.</p>
+                    <p class="form-note" data-cms="register.form_note">We won't share your data with any third party.</p>
                 </form>
             </div>
         </div>
@@ -259,21 +499,36 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="footer-logo">ABA Demy</div>
-                    <p>Training Applied Behavior Analysis professionals in Syria.</p>
+                    <div class="footer-logo">
+                        <img src="../assets/images/icon-cream.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <span data-cms="brand.name">ABA Demy</span>
+                    </div>
+                    <p data-cms="footer.tagline">Training Applied Behavior Analysis professionals in Syria.</p>
+                    <div class="footer-social" id="footer-social">
+                        <a href="tel:+966551538431" data-cms-attr="href:contact.phone_href" aria-label="Call">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </a>
+                        <a href="mailto:info@aba-demy.com" data-cms-attr="href:contact.email_href" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-contact">
-                    <a href="https://wa.me/966551538431" target="_blank" rel="noopener">WhatsApp: +966 55 153 8431</a>
-                    <a href="mailto:aba.demy.syria@gmail.com">aba.demy.syria@gmail.com</a>
+                    <a href="https://wa.me/966551538431" target="_blank" rel="noopener"
+                        data-cms="contact.whatsapp_display" data-cms-attr="href:contact.whatsapp_url">WhatsApp: +966 55 153 8431</a>
+                    <a href="mailto:info@aba-demy.com" data-cms="contact.email"
+                        data-cms-attr="href:contact.email_href">info@aba-demy.com</a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-cms="footer.copyright">
                 © 2026 ABA Demy. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <script src="../assets/js/content-loader.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/store.js"></script>
 </body>
 
 </html>

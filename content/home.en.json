@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "title": "ABA Demy | Applied Behavior Analysis Academy",
+    "description": "ABA Demy — an academy training Applied Behavior Analysis professionals in Syria, with internationally aligned programs and supervision by certified behavior analysts.",
+    "keywords": "Applied Behavior Analysis, ABA, Autism, Training, Syria, ABAT, QASP"
+  },
+  "brand": {
+    "name": "ABA Demy",
+    "tagline": "Knowledge that builds behavior.. and creates impact"
+  },
+  "banner": {
+    "items": [
+      { "text": "Registration is now open for the first ABAT cohort — seats are limited" },
+      { "text": "The QASP program launches soon for professionals seeking career advancement" }
+    ]
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "why": "Why Us",
+    "store": "Store",
+    "services": "Services",
+    "library": "Knowledge Library",
+    "contact": "Contact",
+    "register": "Register",
+    "cta": "Register Interest"
+  },
+  "hero": {
+    "eyebrow": "Syria's first structured ABA training program",
+    "title_html": "Qualified Practitioners<br>for Children Who Deserve Early Intervention",
+    "paragraph": "We train behavior specialists able to deliver effective, evidence-based interventions for children with autism spectrum disorder and developmental disabilities — through internationally aligned programs supervised by certified behavior analysts.",
+    "cta_primary": "Start Your Career",
+    "cta_secondary": "View Programs"
+  },
+  "stats": [
+    { "number": "40", "label": "Hours of theory" },
+    { "number": "15", "label": "Hours of supervised practice" },
+    { "number": "30", "label": "Trainees in year one" },
+    { "number": "1:36", "label": "1 in 36 children has autism" }
+  ],
+  "about": {
+    "eyebrow": "About",
+    "title": "Training built on scientific foundations",
+    "lead": "ABA Demy is an Arabic-language platform specialized in Applied Behavior Analysis, combining specialized training, scientific resources, and a professional community — to meet practitioners' needs and support families with services and consultations grounded in best practice.",
+    "paragraph": "Our model combines live theoretical instruction, hands-on supervision, and continuous professional assessment in line with international standards. It is delivered by internationally certified Syrian experts who bring global expertise and adapt it to the local Syrian context."
+  },
+  "platform_features": {
+    "eyebrow": "ABA Demy",
+    "title": "More Than a Training Platform",
+    "items": [
+      { "icon": "#icon-training", "title": "Specialized Training" },
+      { "icon": "#icon-content", "title": "Scientific Content" },
+      { "icon": "#icon-practice", "title": "Practical Application" },
+      { "icon": "#icon-community", "title": "Professional Community" }
+    ]
+  },
+  "philosophy": {
+    "eyebrow": "Our Philosophy",
+    "title_html": "Knowledge doesn't end at learning..<br>it begins at application",
+    "items": [
+      { "label": "Science", "text": "Everything we offer is grounded in evidence-based practice." },
+      { "label": "Application", "text": "We focus on turning knowledge into applicable skills." },
+      { "label": "Impact", "text": "Our goal is to raise service quality and improve the lives of those we serve." }
+    ]
+  },
+  "offerings": {
+    "eyebrow": "What We Offer",
+    "title": "Everything a practitioner and family need, in one place",
+    "items": [
+      { "icon": "#icon-programs", "title": "Specialized Training Programs", "description": "In Applied Behavior Analysis, including the ABAT and QASP programs." },
+      { "icon": "#icon-library", "title": "Knowledge Library", "description": "Guides and educational materials supporting continuous learning and professional growth." },
+      { "icon": "#icon-workshop", "title": "Interactive Workshops & Discussions", "description": "Carrying knowledge from theory into hands-on practice." },
+      { "icon": "#icon-community", "title": "Professional Community", "description": "Connecting specialists and families to exchange expertise and strengthen collaboration." }
+    ]
+  },
+  "programs": {
+    "eyebrow": "A tiered career path",
+    "title": "Training Programs",
+    "items": [
+      {
+        "active": true,
+        "tag": "Level One · Available now",
+        "name": "Applied Behavior Analysis Technician",
+        "code": "ABAT",
+        "description": "The entry professional level for delivering direct behavioral interventions to children. Includes 40 hours of theory and 15 hours of supervised practice with skill application, case analysis, and direct mentoring.",
+        "features": [
+          { "text": "Live online theoretical training" },
+          { "text": "Practical supervision & case analysis" },
+          { "text": "International certification exam prep" }
+        ],
+        "cta": "Register for this program"
+      },
+      {
+        "active": false,
+        "tag": "Advanced Level · Coming soon",
+        "name": "Qualified Applied Behavior Analysis Specialist",
+        "code": "QASP",
+        "description": "An advanced professional program for practitioners who want to deepen their knowledge and skills in Applied Behavior Analysis and move to a higher tier of professional competency under recognized frameworks.",
+        "features": [
+          { "text": "Supervising behavior technicians" },
+          { "text": "Designing behavior programs" },
+          { "text": "Continuing education programs" }
+        ],
+        "cta": "Register early interest"
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why ABA Demy",
+    "title": "Balancing international standards with local reality",
+    "items": [
+      { "title": "International alignment", "description": "Programs built on the requirements of international ABA credentialing bodies." },
+      { "title": "Certified supervision", "description": "Delivered under a certified behavior analyst (BCBA) and a certified autism supervisor (QASP)." },
+      { "title": "Arabic content", "description": "The first structured program available in Arabic at a cost suited to the Syrian context." },
+      { "title": "Flexible learning", "description": "Live online theory with practical supervision and continuous assessment." }
+    ]
+  },
+  "origin": {
+    "eyebrow": "Why ABA Demy Was Founded",
+    "title": "A story that began from a real need",
+    "items": [
+      { "step": "01", "label": "The Reality", "text": "Amid rising demand for evidence-based interventions in Syria, there is a clear shortage of specialized training, Arabic-language resources, and professional services that practitioners and families need." },
+      { "step": "02", "label": "The Challenge", "text": "Practitioners faced limited opportunities for professional development and specialized qualification, while families struggled to access professional services to support their children with developmental disabilities early on." },
+      { "step": "03", "label": "This Is Where ABA Demy Began", "text": "To become one of the first specialized platforms in Syria, bringing together specialized training, educational resources, professional supervision, and family support services." }
+    ]
+  },
+  "register": {
+    "eyebrow": "Register",
+    "title": "Register your interest",
+    "description": "Fill in the form and our team will reach out with program details and upcoming cohort dates. Seats are limited (15 trainees per cohort).",
+    "whatsapp_label": "Or contact us directly on WhatsApp",
+    "form_subject": "New Registration — ABA Demy",
+    "form_note": "We won't share your data with any third party."
+  },
+  "footer": {
+    "tagline": "Training Applied Behavior Analysis professionals in Syria.",
+    "copyright": "© 2026 ABA Demy. All rights reserved."
+  },
+  "accreditation": {
+    "title": "Internationally accredited",
+    "description": "Our training programs are delivered by an organization officially recognized by the QABA American board as an Approved Coursework/Training Provider."
+  },
+  "contact": {
+    "whatsapp_url": "https://wa.me/966551538431",
+    "whatsapp_display": "WhatsApp: +966 55 153 8431",
+    "email": "info@aba-demy.com",
+    "email_href": "mailto:info@aba-demy.com",
+    "phone_display": "+966 55 153 8431",
+    "phone_href": "tel:+966551538431",
+    "facebook_url": "",
+    "instagram_url": "https://www.instagram.com/aba.demy",
+    "linkedin_url": ""
+  },
+  "about_page": {
+    "eyebrow": "About Us",
+    "title": "Our story, our philosophy, our mission"
+  },
+  "services_page": {
+    "eyebrow": "Services",
+    "title": "Our services are coming soon",
+    "message": "We're preparing a set of support services for specialists, families, and institutions — stay tuned for details.",
+    "cta": "Contact Us",
+    "back_cta": "Back to Home"
+  },
+  "library_page": {
+    "eyebrow": "Knowledge Library",
+    "title": "Our knowledge library is coming soon",
+    "message": "The library will feature guides and educational materials that support continuous learning and professional practice for both specialists and families.",
+    "cta": "Contact Us",
+    "back_cta": "Back to Home"
+  },
+  "contact_page": {
+    "eyebrow": "Contact Us",
+    "title": "We're here to help",
+    "intro": "Whether you have a question about our training programs, or you're looking for services for your family or institution, we'd love to hear from you — we typically reply within 48 business hours.",
+    "form_name_label": "Name",
+    "form_email_label": "Email",
+    "form_type_label": "Inquiry Type",
+    "form_type_options": [
+      { "text": "Training Programs" },
+      { "text": "Family Services" },
+      { "text": "Specialist Services" },
+      { "text": "Partnerships" },
+      { "text": "Other" }
+    ],
+    "form_message_label": "Message",
+    "form_submit": "Send Message",
+    "form_note": "We won't share your data with any third party.",
+    "info_title": "Other ways to reach us",
+    "form_subject": "New Inquiry — Contact Form"
+  },
+  "store_page": {
+    "eyebrow": "Store",
+    "title": "Our Courses & Programs",
+    "intro": "Choose the program or course that fits you, add it to your cart, and complete your order directly via WhatsApp.",
+    "cart_title": "Your Cart",
+    "cart_empty": "Your cart is empty.",
+    "cart_total_label": "Total",
+    "cart_checkout": "Checkout via WhatsApp",
+    "cart_clear": "Clear Cart",
+    "add_to_cart": "Add to Cart",
+    "added_label": "Added ✓",
+    "whatsapp_order_intro": "Hello, I'd like to register for:",
+    "whatsapp_order_total": "Estimated total:"
+  },
+  "store": {
+    "currency": "$",
+    "items": [
+      {
+        "id": "abat-in-person",
+        "name": "ABAT Program — In-Person",
+        "type": "In-Person",
+        "price": 150,
+        "location": "Damascus University halls or Sham Hotel — Damascus",
+        "description": "The full ABAT program (theory + supervised practice), delivered in person in Damascus.",
+        "badge": "Most Popular"
+      },
+      {
+        "id": "abat-online",
+        "name": "ABAT Program — Online",
+        "type": "Online",
+        "price": 100,
+        "location": "",
+        "description": "The same ABAT content — live theoretical training and supervised practice online from anywhere.",
+        "badge": ""
+      },
+      {
+        "id": "recorded-course",
+        "name": "Recorded Course",
+        "type": "Recorded",
+        "price": 60,
+        "location": "",
+        "description": "A recorded course you can watch anytime, at your own pace, with ongoing access.",
+        "badge": ""
+      }
+    ]
+  },
+  "assessment_teaser": {
+    "eyebrow": "Before You Register",
+    "title": "Test Your Professional Readiness First",
+    "description": "Answer a few short questions to find out your current knowledge level in Applied Behavior Analysis and how ready you are to join the ABAT program — your result is sent to your email.",
+    "cta": "Start the Assessment"
+  },
+  "assessment_page": {
+    "eyebrow": "Assessment",
+    "title": "Test Your Knowledge and Readiness",
+    "intro": "Before registering for the program, take this short assessment to find out your baseline knowledge of Applied Behavior Analysis and how ready you currently are to join. This is an initial guidance result reviewed by our specialist team, and it will be sent to your email.",
+    "disclaimer": "This assessment is an initial guidance tool only, and does not replace a direct professional evaluation by a certified specialist.",
+    "start_cta": "Start Assessment",
+    "form_title": "Before we start, tell us a bit about you",
+    "form_name_label": "Full Name",
+    "form_email_label": "Email",
+    "form_phone_label": "Phone / WhatsApp",
+    "form_continue": "Continue to Questions",
+    "section_knowledge": "Section One: Baseline Knowledge",
+    "section_readiness": "Section Two: Professional Readiness",
+    "next_label": "Next",
+    "prev_label": "Back",
+    "submit_label": "Finish & Send Result",
+    "submitting_label": "Sending...",
+    "thankyou_title": "Thanks for completing the assessment!",
+    "thankyou_message": "We've received your answers. Our team will review your result and send you the assessment and recommendation by email within 48 business hours.",
+    "error_message": "Something went wrong while sending. Please try again or reach us on WhatsApp.",
+    "form_note": "We won't share your data with any third party.",
+    "back_home": "Back to Home"
+  }
+}

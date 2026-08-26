@@ -1,6 +1,9 @@
-// ABA Demy — form handling & smooth UX
+// ABA Demy — form handling, announcement banner & smooth UX
 
 document.addEventListener('DOMContentLoaded', function () {
+    initAnnounceBar();
+    document.addEventListener('cms-content-loaded', function (e) { initOptionalSocialLinks(e.detail); });
+
     const form = document.querySelector('.register-form');
     if (!form) return;
 
@@ -54,7 +57,81 @@ document.addEventListener('DOMContentLoaded', function () {
             formEl.appendChild(note);
         }
         note.textContent = text;
-        note.style.background = ok ? '#e7f8f5' : '#fdecec';
-        note.style.color = ok ? '#0f766e' : '#b91c1c';
+        note.style.background = ok ? '#F4EFDF' : '#fef2f2';
+        note.style.color = ok ? '#091D4B' : '#c63636';
     }
 });
+
+function initAnnounceBar() {
+    var bar = document.getElementById('announce-bar');
+    if (!bar) return;
+    var closeBtn = document.getElementById('announce-close');
+    var track = bar.querySelector('.announce-track');
+
+    var DISMISS_KEY = 'aba-demy-announce-dismissed';
+    try {
+        if (localStorage.getItem(DISMISS_KEY) === '1') {
+            bar.style.display = 'none';
+            return;
+        }
+    } catch (e) { /* localStorage unavailable — keep banner visible */ }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            bar.style.display = 'none';
+            try { localStorage.setItem(DISMISS_KEY, '1'); } catch (e) { /* ignore */ }
+        });
+    }
+
+    // Once CMS content hydrates the track, duplicate its items once so the
+    // CSS marquee (translateX(-50%)) loops seamlessly regardless of item count.
+    function duplicateForLoop() {
+        if (!track || track.dataset.duplicated === '1') return;
+        var items = Array.prototype.slice.call(track.children).filter(function (el) {
+            return el.tagName !== 'TEMPLATE';
+        });
+        if (!items.length) return;
+        items.forEach(function (el) { track.appendChild(el.cloneNode(true)); });
+        track.dataset.duplicated = '1';
+    }
+
+    // The HTML already ships with the announcement items duplicated once (for a
+    // seamless loop with no JS at all). Only re-duplicate when content-loader.js
+    // has actually replaced the track with fresh, un-duplicated CMS items.
+    document.addEventListener('cms-content-loaded', duplicateForLoop);
+}
+
+// Facebook / Instagram / LinkedIn icons only appear once a real URL is set in
+// the content JSON (via the control panel) — no dead/placeholder links.
+function initOptionalSocialLinks(data) {
+    var wrap = document.getElementById('footer-social');
+    if (!wrap || !data || !data.contact) return;
+
+    var ICONS = {
+        facebook: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>',
+        instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>',
+        linkedin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A5.98 5.98 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>'
+    };
+    var LABELS = { facebook: 'Facebook', instagram: 'Instagram', linkedin: 'LinkedIn' };
+
+    ['facebook', 'instagram', 'linkedin'].forEach(function (key) {
+        var url = data.contact[key + '_url'];
+        var existing = wrap.querySelector('[data-social="' + key + '"]');
+        if (url) {
+            if (!existing) {
+                var a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                a.rel = 'noopener';
+                a.setAttribute('data-social', key);
+                a.setAttribute('aria-label', LABELS[key]);
+                a.innerHTML = ICONS[key];
+                wrap.appendChild(a);
+            } else {
+                existing.href = url;
+            }
+        } else if (existing) {
+            existing.remove();
+        }
+    });
+}

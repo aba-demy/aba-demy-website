@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
+    <meta name="description" data-cms-attr="content:meta.description"
         content="ABA Demy — أكاديمية متخصصة في تأهيل أخصائيي تحليل السلوك التطبيقي في سوريا، ببرامج معتمدة دوليًا وإشراف محللين سلوكيين معتمدين.">
-    <meta name="keywords" content="تحليل السلوك التطبيقي, ABA, التوحد, تدريب, أخصائي سلوكي, سوريا, ABAT, QASP-S">
+    <meta name="keywords" data-cms-attr="content:meta.keywords" content="تحليل السلوك التطبيقي, ABA, التوحد, تدريب, أخصائي سلوكي, سوريا, ABAT, QASP">
     <meta name="author" content="ABA Demy">
-    <title>ABA Demy | أكاديمية تحليل السلوك التطبيقي</title>
+    <title data-cms="meta.title">ABA Demy | أكاديمية تحليل السلوك التطبيقي</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,27 +17,95 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body data-content-base="">
+
+    <!-- ICON SPRITE (referenced via <use> — keeps icons CMS-friendly) -->
+    <svg style="display:none" aria-hidden="true">
+        <symbol id="icon-training" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5"/>
+        </symbol>
+        <symbol id="icon-content" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 6C10 4.5 7 4 4 4v13c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2Z"/><path d="M12 6v13"/>
+        </symbol>
+        <symbol id="icon-practice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>
+        </symbol>
+        <symbol id="icon-community" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17.5" cy="9" r="2.3"/><path d="M16 14.2c2.8.4 5 2.4 5 5.8"/>
+        </symbol>
+        <symbol id="icon-programs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/>
+        </symbol>
+        <symbol id="icon-library" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="4" height="16" rx="1"/><rect x="9" y="4" width="4" height="16" rx="1"/><rect x="15" y="4" width="6" height="16" rx="1"/>
+        </symbol>
+        <symbol id="icon-workshop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H9l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/>
+        </symbol>
+    </svg>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="سلة المشتريات">
+        <div class="cart-header">
+            <h3 data-cms="store_page.cart_title">سلة المشتريات</h3>
+            <button type="button" class="cart-close" id="cart-close" aria-label="إغلاق السلة">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items" data-empty-label="السلة فارغة حاليًا.">
+            <p class="cart-empty-msg">السلة فارغة حاليًا.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span data-cms="store_page.cart_total_label">الإجمالي</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <button type="button" class="btn-primary btn-block" id="cart-checkout-btn" data-cms="store_page.cart_checkout">إتمام الطلب عبر واتساب</button>
+            <button type="button" class="cart-clear-btn" id="cart-clear-btn" data-cms="store_page.cart_clear">إفراغ السلة</button>
+        </div>
+    </aside>
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="announce-bar" id="announce-bar">
+        <div class="announce-track" data-cms-list="banner.items">
+            <template>
+                <span data-cms="text"></span>
+            </template>
+            <span>الدفعة الأولى من برنامج فني تحليل السلوك التطبيقي ABAT تفتح التسجيل الآن — المقاعد محدودة</span>
+            <span>برنامج QASP يفتح قريبًا للمختصين الراغبين بالتطور المهني</span>
+            <span>الدفعة الأولى من برنامج فني تحليل السلوك التطبيقي ABAT تفتح التسجيل الآن — المقاعد محدودة</span>
+            <span>برنامج QASP يفتح قريبًا للمختصين الراغبين بالتطور المهني</span>
+        </div>
+        <button class="announce-close" id="announce-close" aria-label="إغلاق">✕</button>
+    </div>
 
     <!-- HEADER -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">ABA Demy</a>
+                    <a href="index.html">
+                        <img src="assets/images/icon-navy.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <span data-cms="brand.name">ABA Demy</span>
+                    </a>
                 </div>
 
                 <ul class="nav-links">
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#about">عن الأكاديمية</a></li>
-                    <li><a href="#programs">البرامج</a></li>
-                    <li><a href="#why">لماذا نحن</a></li>
-                    <li><a href="#register">التسجيل</a></li>
+                    <li><a href="#home" data-cms="nav.home">الرئيسية</a></li>
+                    <li><a href="about.html" data-cms="nav.about">عن الأكاديمية</a></li>
+                    <li><a href="#programs" data-cms="nav.programs">البرامج</a></li>
+                    <li><a href="store.html" data-cms="nav.store">المتجر</a></li>
+                    <li><a href="services.html" data-cms="nav.services">الخدمات</a></li>
+                    <li><a href="library.html" data-cms="nav.library">المكتبة المعرفية</a></li>
+                    <li><a href="contact.html" data-cms="nav.contact">تواصل معنا</a></li>
                 </ul>
 
                 <div class="nav-actions">
+                    <button type="button" class="cart-btn" id="cart-btn" aria-label="Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        <span class="cart-badge hidden" id="cart-badge">0</span>
+                    </button>
                     <a href="en/index.html" class="lang-switch">EN</a>
-                    <a href="#register" class="btn-primary">سجّل اهتمامك</a>
+                    <a href="#register" class="btn-primary" data-cms="nav.cta">سجّل اهتمامك</a>
                 </div>
             </nav>
         </div>
@@ -46,16 +114,17 @@
     <!-- HERO -->
     <section class="hero" id="home">
         <div class="container">
-            <span class="eyebrow">أول برنامج مهني منظّم لتحليل السلوك التطبيقي في سوريا</span>
-            <h1>كوادر مؤهلة<br>لأطفال يستحقون التدخل المبكر</h1>
-            <p>
+            <p class="brand-tagline" data-cms="brand.tagline">معرفةٌ تبني سلوكًا.. تصنع أثرًا</p>
+            <span class="eyebrow" data-cms="hero.eyebrow">أول برنامج مهني منظّم لتحليل السلوك التطبيقي في سوريا</span>
+            <h1 data-cms="hero.title_html" data-cms-html>كوادر مؤهلة<br>لأطفال يستحقون التدخل المبكر</h1>
+            <p data-cms="hero.paragraph">
                 نُؤهّل أخصائيين سلوكيين قادرين على تقديم تدخلات فعّالة قائمة على الأدلة
                 للأطفال ذوي اضطراب طيف التوحد والاضطرابات النمائية، عبر برامج معتمدة دوليًا
                 وإشراف محللين سلوكيين معتمدين.
             </p>
             <div class="hero-actions">
-                <a href="#register" class="btn-primary">ابدأ رحلتك المهنية</a>
-                <a href="#programs" class="btn-ghost">تعرّف على البرامج</a>
+                <a href="#register" class="btn-primary" data-cms="hero.cta_primary">ابدأ رحلتك المهنية</a>
+                <a href="#programs" class="btn-ghost" data-cms="hero.cta_secondary">تعرّف على البرامج</a>
             </div>
         </div>
     </section>
@@ -63,7 +132,13 @@
     <!-- STATS STRIP -->
     <section class="stats">
         <div class="container">
-            <div class="stats-grid">
+            <div class="stats-grid" data-cms-list="stats">
+                <template>
+                    <div class="stat">
+                        <span class="stat-num" data-cms="number"></span>
+                        <span class="stat-label" data-cms="label"></span>
+                    </div>
+                </template>
                 <div class="stat">
                     <span class="stat-num">40</span>
                     <span class="stat-label">ساعة تدريب نظري</span>
@@ -84,17 +159,49 @@
         </div>
     </section>
 
+    <!-- PLATFORM FEATURES -->
+    <section class="platform-features">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="platform_features.eyebrow">ABA Demy</span>
+            <h2 data-cms="platform_features.title">أكثر من منصة تدريبية</h2>
+            <div class="platform-features-grid" data-cms-list="platform_features.items">
+                <template>
+                    <div class="pf-item">
+                        <span class="pf-icon"><svg><use data-cms-attr="href:icon"></use></svg></span>
+                        <span data-cms="title"></span>
+                    </div>
+                </template>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-training"></use></svg></span>
+                    <span>تدريب متخصص</span>
+                </div>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-content"></use></svg></span>
+                    <span>محتوى علمي</span>
+                </div>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-practice"></use></svg></span>
+                    <span>تطبيق عملي</span>
+                </div>
+                <div class="pf-item">
+                    <span class="pf-icon"><svg><use href="#icon-community"></use></svg></span>
+                    <span>مجتمع مهني</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
-            <span class="section-eyebrow">عن الأكاديمية</span>
-            <h2>منصة تدريب تبني الكفاءة على أساس علمي</h2>
-            <p class="lead">
+            <span class="section-eyebrow" data-cms="about.eyebrow">عن الأكاديمية</span>
+            <h2 data-cms="about.title">منصة تدريب تبني الكفاءة على أساس علمي</h2>
+            <p class="lead" data-cms="about.lead">
                 ABA Demy أكاديمية متخصصة في تطوير وتمكين المختصين والأسر والمؤسسات التي تقدّم
                 خدماتها للأفراد من ذوي الاضطرابات النمائية واضطراب طيف التوحد، من خلال برامج
                 تحليل السلوك التطبيقي المبنية على أحدث الطرق العلمية والعملية المعتمدة دوليًا.
             </p>
-            <p>
+            <p data-cms="about.paragraph">
                 يجمع نموذجنا التدريبي بين التعليم النظري المباشر والإشراف العملي والتقييم المهني
                 المستمر، بما يتوافق مع المعايير الدولية، ويُنفَّذ بخبرات سورية معتمدة دوليًا
                 قادرة على نقل الخبرة العالمية وتكييفها مع السياق المحلي في سوريا.
@@ -102,13 +209,92 @@
         </div>
     </section>
 
+    <!-- PHILOSOPHY -->
+    <section class="philosophy">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="philosophy.eyebrow">فلسفتنا</span>
+            <h2 data-cms="philosophy.title_html" data-cms-html>المعرفة لا تنتهي عند التعلم..<br>بل تبدأ عند التطبيق</h2>
+            <div class="philosophy-grid" data-cms-list="philosophy.items">
+                <template>
+                    <div class="philosophy-item">
+                        <span class="ph-label" data-cms="label"></span>
+                        <p data-cms="text"></p>
+                    </div>
+                </template>
+                <div class="philosophy-item">
+                    <span class="ph-label">العلم</span>
+                    <p>كل ما نقدمه يستند إلى الممارسات المبنية على الدليل.</p>
+                </div>
+                <div class="philosophy-item">
+                    <span class="ph-label">التطبيق</span>
+                    <p>نركز على تحويل المعرفة إلى مهارات قابلة للتطبيق.</p>
+                </div>
+                <div class="philosophy-item">
+                    <span class="ph-label">الأثر</span>
+                    <p>غايتنا رفع جودة الخدمات وتحسين حياة المستفيدين.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERINGS -->
+    <section class="offerings">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="offerings.eyebrow">ماذا نقدّم</span>
+            <h2 data-cms="offerings.title">كل ما يحتاجه الممارس والأسرة في مكان واحد</h2>
+            <div class="offerings-grid" data-cms-list="offerings.items">
+                <template>
+                    <div class="offering-card">
+                        <span class="offering-icon"><svg><use data-cms-attr="href:icon"></use></svg></span>
+                        <h4 data-cms="title"></h4>
+                        <p data-cms="description"></p>
+                    </div>
+                </template>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-programs"></use></svg></span>
+                    <h4>برامج تدريبية متخصصة</h4>
+                    <p>في مجال تحليل السلوك التطبيقي، تشمل برنامجي ABAT وQASP.</p>
+                </div>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-library"></use></svg></span>
+                    <h4>مكتبة معرفية</h4>
+                    <p>أدلة ومواد تعليمية تدعم التعلّم المستمر وتطوير الممارسة المهنية.</p>
+                </div>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-workshop"></use></svg></span>
+                    <h4>ورش عمل ومناقشات تفاعلية</h4>
+                    <p>تنقل المعرفة من الجانب النظري إلى التطبيق العملي.</p>
+                </div>
+                <div class="offering-card">
+                    <span class="offering-icon"><svg><use href="#icon-community"></use></svg></span>
+                    <h4>مجتمع مهني</h4>
+                    <p>يربط الأخصائيين والأسر لتبادل الخبرات ومشاركة التجارب وتعزيز التعاون.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PROGRAMS -->
     <section class="programs" id="programs">
         <div class="container">
-            <span class="section-eyebrow">مسار مهني متدرّج</span>
-            <h2>البرامج التدريبية</h2>
+            <span class="section-eyebrow" data-cms="programs.eyebrow">مسار مهني متدرّج</span>
+            <h2 data-cms="programs.title">البرامج التدريبية</h2>
 
-            <div class="program-list">
+            <div class="program-list" data-cms-list="programs.items">
+                <template>
+                    <div class="program-card">
+                        <div class="program-tag" data-cms="tag"></div>
+                        <h3 data-cms="name"></h3>
+                        <div class="program-code" data-cms="code"></div>
+                        <p data-cms="description"></p>
+                        <ul class="program-features" data-cms-list="features">
+                            <template>
+                                <li data-cms="text"></li>
+                            </template>
+                        </ul>
+                        <a href="#register" class="btn-primary btn-block" data-cms="cta"></a>
+                    </div>
+                </template>
 
                 <div class="program-card active">
                     <div class="program-tag">المستوى الأول · متاح الآن</div>
@@ -129,12 +315,12 @@
 
                 <div class="program-card">
                     <div class="program-tag muted">المستوى المتقدم · قريبًا</div>
-                    <h3>مساعد مشرف سلوكي معتمد</h3>
-                    <div class="program-code">QASP-S</div>
+                    <h3>ممارس تحليل السلوك التطبيقي المؤهل</h3>
+                    <div class="program-code">QASP</div>
                     <p>
-                        المستوى المتوسط الذي يؤهّل الأخصائي للإشراف على الفنيين وتطوير
-                        البرامج السلوكية، بخطة تنفيذية ومستوى تأهيل أعلى. يُطلق في المرحلة
-                        الثانية بعد نجاح الدفعة الأولى.
+                        برنامج مهني متقدم يستهدف الممارسين الراغبين في تطوير معارفهم ومهاراتهم
+                        في تحليل السلوك التطبيقي، والانتقال إلى مستوى أعلى من الكفاءة المهنية
+                        وفق الأطر المعتمدة.
                     </p>
                     <ul class="program-features">
                         <li>الإشراف على فنيي السلوك</li>
@@ -143,7 +329,6 @@
                     </ul>
                     <a href="#register" class="btn-ghost btn-block">سجّل اهتمامك المبكر</a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -151,16 +336,22 @@
     <!-- WHY US -->
     <section class="why-us" id="why">
         <div class="container">
-            <span class="section-eyebrow">لماذا ABA Demy</span>
-            <h2>تدريب يوازن بين المعيار الدولي والواقع المحلي</h2>
-            <div class="why-grid">
+            <span class="section-eyebrow" data-cms="why.eyebrow">لماذا ABA Demy</span>
+            <h2 data-cms="why.title">تدريب يوازن بين المعيار الدولي والواقع المحلي</h2>
+            <div class="why-grid" data-cms-list="why.items">
+                <template>
+                    <div class="why-item">
+                        <h4 data-cms="title"></h4>
+                        <p data-cms="description"></p>
+                    </div>
+                </template>
                 <div class="why-item">
                     <h4>اعتماد دولي</h4>
                     <p>برامج مبنية على متطلبات هيئات الاعتماد الدولية في تحليل السلوك التطبيقي.</p>
                 </div>
                 <div class="why-item">
                     <h4>إشراف معتمد</h4>
-                    <p>تنفيذ بإشراف محلل سلوك معتمد BCBA ومشرف توحد معتمد QASP-S.</p>
+                    <p>تنفيذ بإشراف محلل سلوك معتمد BCBA ومشرف توحد معتمد QASP.</p>
                 </div>
                 <div class="why-item">
                     <h4>محتوى بالعربية</h4>
@@ -174,14 +365,63 @@
         </div>
     </section>
 
-    <!-- IMPACT -->
-    <section class="impact">
+    <!-- ACCREDITATION -->
+    <section class="accreditation">
         <div class="container">
-            <blockquote>
-                في ظل نقص حاد في الخدمات التأهيلية القائمة على الأدلة، وغياب الكوادر المدرّبة،
-                نبني قاعدة مهنية تُعيد للأطفال وأسرهم فرصة التدخل المبكر — العامل الأهم في
-                تحسين حياتهم على المدى الطويل.
-            </blockquote>
+            <div class="accreditation-text">
+                <h3 data-cms="accreditation.title">معتمدون دوليًا</h3>
+                <p data-cms="accreditation.description">برامجنا التدريبية مقدَّمة من جهة معتمدة رسميًا من البورد الأمريكي QABA كمزوّد تدريب معتمد.</p>
+            </div>
+            <div class="accreditation-badges">
+                <img src="assets/images/qaba-badge-1.jpeg" alt="QABA Approved Coursework Provider">
+                <img src="assets/images/qaba-badge-2.jpeg" alt="QABA Approved Training Program">
+            </div>
+        </div>
+    </section>
+
+    <!-- ORIGIN -->
+    <section class="origin">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="origin.eyebrow">لماذا وُجدت ABA Demy</span>
+            <h2 data-cms="origin.title">قصة انطلقت من حاجة حقيقية</h2>
+            <div class="origin-track" data-cms-list="origin.items">
+                <template>
+                    <div class="origin-step">
+                        <span class="origin-num" data-cms="step"></span>
+                        <h4 data-cms="label"></h4>
+                        <p data-cms="text"></p>
+                    </div>
+                </template>
+                <div class="origin-step">
+                    <span class="origin-num">01</span>
+                    <h4>الواقع</h4>
+                    <p>نظرًا للطلب المتزايد على التدخلات المبنية على الدليل العلمي في سوريا، يقابله نقص واضح في فرص التدريب المتخصص والموارد العربية والخدمات المهنية التي يحتاجها الممارسون والأسر.</p>
+                </div>
+                <div class="origin-step">
+                    <span class="origin-num">02</span>
+                    <h4>التحدي</h4>
+                    <p>أمام هذا الواقع، واجه الممارسون محدودية في فرص التطور المهني والتأهيل المتخصص، بينما واجهت الأسر صعوبة في الوصول إلى خدمات احترافية تساعدها على دعم أبنائها من ذوي الاضطرابات النمائية منذ وقت مبكر.</p>
+                </div>
+                <div class="origin-step">
+                    <span class="origin-num">03</span>
+                    <h4>من هنا جاءت ABA Demy</h4>
+                    <p>لتكون من أوائل المنصات المتخصصة في سوريا، تجمع بين التدريب المتخصص والموارد التعليمية والإشراف المهني والخدمات الداعمة للأسر.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT TEASER -->
+    <section class="assessment-teaser-section">
+        <div class="container">
+            <div class="assessment-teaser">
+                <div class="assessment-teaser-text">
+                    <span class="section-eyebrow" data-cms="assessment_teaser.eyebrow">قبل التسجيل</span>
+                    <h2 data-cms="assessment_teaser.title">اختبر جاهزيتك المهنية أولًا</h2>
+                    <p data-cms="assessment_teaser.description">أجب عن أسئلة قصيرة لتتعرّف على مستوى معرفتك الحالي بتحليل السلوك التطبيقي ومدى جاهزيتك للانضمام إلى برنامج ABAT — نتيجتك تصلك عبر بريدك الإلكتروني.</p>
+                </div>
+                <a href="assessment.html" class="btn-primary" data-cms="assessment_teaser.cta">ابدأ اختبار التقييم</a>
+            </div>
         </div>
     </section>
 
@@ -190,20 +430,21 @@
         <div class="container">
             <div class="register-wrap">
                 <div class="register-intro">
-                    <span class="section-eyebrow light">التسجيل</span>
-                    <h2>سجّل اهتمامك بالانضمام</h2>
-                    <p>
+                    <span class="section-eyebrow light" data-cms="register.eyebrow">التسجيل</span>
+                    <h2 data-cms="register.title">سجّل اهتمامك بالانضمام</h2>
+                    <p data-cms="register.description">
                         املأ النموذج وسيتواصل معك فريقنا بتفاصيل البرنامج ومواعيد الدفعات
                         القادمة. المقاعد محدودة (15 متدربًا لكل دفعة).
                     </p>
-                    <a href="https://wa.me/966551538431" class="whatsapp-link" target="_blank" rel="noopener">
+                    <a href="https://wa.me/966551538431" class="whatsapp-link" target="_blank" rel="noopener"
+                        data-cms="register.whatsapp_label" data-cms-attr="href:contact.whatsapp_url">
                         أو تواصل عبر واتساب مباشرة
                     </a>
                 </div>
 
                 <form class="register-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="5b5fd8d2-0c97-4e56-983d-db5016750f2a">
-                    <input type="hidden" name="subject" value="طلب تسجيل جديد — ABA Demy">
+                    <input type="hidden" name="subject" value="طلب تسجيل جديد — ABA Demy" data-cms-attr="value:register.form_subject">
                     <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
                     <div class="field">
@@ -231,7 +472,7 @@
                             <label for="program">البرنامج المطلوب</label>
                             <select id="program" name="البرنامج" required>
                                 <option value="ABAT">فني السلوك ABAT</option>
-                                <option value="QASP-S">مشرف QASP-S (قريبًا)</option>
+                                <option value="QASP">ممارس مؤهل QASP (قريبًا)</option>
                             </select>
                         </div>
                     </div>
@@ -243,7 +484,7 @@
                     </div>
 
                     <button type="submit" class="btn-primary btn-block">إرسال الطلب</button>
-                    <p class="form-note">لن نشارك بياناتك مع أي جهة خارجية.</p>
+                    <p class="form-note" data-cms="register.form_note">لن نشارك بياناتك مع أي جهة خارجية.</p>
                 </form>
             </div>
         </div>
@@ -254,21 +495,36 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="footer-logo">ABA Demy</div>
-                    <p>أكاديمية تأهيل أخصائيي تحليل السلوك التطبيقي في سوريا.</p>
+                    <div class="footer-logo">
+                        <img src="assets/images/icon-cream.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <span data-cms="brand.name">ABA Demy</span>
+                    </div>
+                    <p data-cms="footer.tagline">أكاديمية تأهيل أخصائيي تحليل السلوك التطبيقي في سوريا.</p>
+                    <div class="footer-social" id="footer-social">
+                        <a href="tel:+966551538431" data-cms-attr="href:contact.phone_href" aria-label="اتصال">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </a>
+                        <a href="mailto:info@aba-demy.com" data-cms-attr="href:contact.email_href" aria-label="بريد إلكتروني">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-contact">
-                    <a href="https://wa.me/966551538431" target="_blank" rel="noopener">واتساب: 8431 153 55 966+</a>
-                    <a href="mailto:aba.demy.syria@gmail.com">aba.demy.syria@gmail.com</a>
+                    <a href="https://wa.me/966551538431" target="_blank" rel="noopener"
+                        data-cms="contact.whatsapp_display" data-cms-attr="href:contact.whatsapp_url">واتساب: 8431 153 55 966+</a>
+                    <a href="mailto:info@aba-demy.com" data-cms="contact.email"
+                        data-cms-attr="href:contact.email_href">info@aba-demy.com</a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-cms="footer.copyright">
                 © 2026 ABA Demy. جميع الحقوق محفوظة.
             </div>
         </div>
     </footer>
 
+    <script src="assets/js/content-loader.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/store.js"></script>
 </body>
 
 </html>
