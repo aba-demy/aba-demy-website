@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>لوحة إدارة الموقع | ABA Demy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="top">
+        <div class="brand">
+            <strong>لوحة إدارة الموقع</strong>
+            <span class="who" id="who"></span>
+        </div>
+        <div class="actions">
+            <span class="dirty" id="dirty" hidden>تعديلات غير محفوظة</span>
+            <button type="button" class="btn ghost" id="open-history">سجل التعديلات</button>
+            <a class="btn ghost" href="/" target="_blank" rel="noopener">فتح الموقع</a>
+            <button type="button" class="btn primary" id="save" disabled>حفظ التعديلات</button>
+        </div>
+    </header>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <div class="layout">
+        <nav class="nav" id="nav" aria-label="الأقسام"></nav>
+        <main class="main" id="main"></main>
+    </div>
+
+    <div class="modal" id="history" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="hist-title">
+            <div class="modal-head">
+                <h2 id="hist-title">سجل التعديلات</h2>
+                <button type="button" class="icon" id="hist-close" aria-label="إغلاق">✕</button>
+            </div>
+            <p class="sdesc">اختاري نسخة سابقة لتحميلها في اللوحة. لن تُنشر حتى تضغطي «حفظ التعديلات».</p>
+            <div id="hist-list"></div>
+        </div>
+    </div>
+
+    <script src="schema.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

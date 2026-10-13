@@ -152,7 +152,10 @@
         var lines = cart.map(function (item) {
             return '- ' + item.name + ' × ' + item.qty + ' (' + STR.currency + (item.qty * item.price) + ')';
         });
-        var text = STR.orderIntro + '\n' + lines.join('\n') + '\n\n' + STR.orderTotal + ' ' + STR.currency + cartTotal(cart);
+        var sp = (window.ABA_CONTENT && window.ABA_CONTENT.store_page) || {};
+        var intro = sp.whatsapp_order_intro || STR.orderIntro;
+        var totalLabel = sp.whatsapp_order_total || STR.orderTotal;
+        var text = intro + '\n' + lines.join('\n') + '\n\n' + totalLabel + ' ' + STR.currency + cartTotal(cart);
         var url = 'https://wa.me/' + whatsappNumber() + '?text=' + encodeURIComponent(text);
         window.open(url, '_blank', 'noopener');
     }
