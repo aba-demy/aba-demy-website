@@ -220,7 +220,7 @@
     "description": "Fill in the form and our team will reach out with program details and upcoming cohort dates. Seats are limited (15 trainees per cohort).",
     "whatsapp_label": "Or contact us directly on WhatsApp",
     "form_subject": "New Registration — ABA Demy",
-    "form_note": "We won't share your data with any third party.",
+    "form_note": "By submitting this form you allow us to use your details only to get back to you about your request. We never sell them. Forms are processed by an external service (Web3Forms).",
     "form_name_label": "Full name",
     "form_email_label": "Email",
     "form_phone_label": "Phone / WhatsApp",
@@ -322,7 +322,7 @@
     ],
     "form_message_label": "Message",
     "form_submit": "Send Message",
-    "form_note": "We won't share your data with any third party.",
+    "form_note": "By submitting this form you allow us to use your details only to get back to you about your request. We never sell them. Forms are processed by an external service (Web3Forms).",
     "info_title": "Other ways to reach us",
     "form_subject": "New Inquiry — Contact Form"
   },
@@ -420,6 +420,47 @@
         "image": "/map/og-image.jpg",
         "date": "",
         "body": ""
+      }
+    ]
+  },
+  "privacy_page": {
+    "link_label": "Privacy Policy",
+    "eyebrow": "Privacy",
+    "title": "Privacy Policy",
+    "intro": "We respect your privacy. This page explains in plain words what data we collect, why, and who it passes through.",
+    "updated": "Last updated: October 2026",
+    "sections": [
+      {
+        "title": "Who we are",
+        "text": "ABA Demy is an academy that trains Applied Behavior Analysis practitioners. For any question about your data, write to: ⁦info@aba-demy.com⁩"
+      },
+      {
+        "title": "Data we collect",
+        "text": "When you fill in the registration or contact form we collect: your name, email, phone or WhatsApp number, city, professional background (optional), the program you chose, and your message. We do not ask for payment details and we do not collect sensitive data."
+      },
+      {
+        "title": "How we use it",
+        "text": "We use it to answer your request and to contact you about programs, cohort dates and registration. We do not sell your data, and we do not send you marketing messages without your consent."
+      },
+      {
+        "title": "Who your data passes through",
+        "text": "Forms are sent through Web3Forms (a third-party service) to our email inbox. The website is hosted on Cloudflare and its files are stored on GitHub. If you contact us on WhatsApp, the conversation is governed by WhatsApp's policy. We share your data with these providers only as far as needed to run the site and receive your request."
+      },
+      {
+        "title": "Cart and browser storage",
+        "text": "The site keeps your shopping cart in your own browser only; nothing reaches us unless you send the order to us on WhatsApp. We do not use advertising trackers. The site loads fonts from Google Fonts, so Google may receive your connection address (IP) for that purpose. Cloudflare may use technical cookies to protect the site."
+      },
+      {
+        "title": "How long we keep it",
+        "text": "We keep your messages for as long as needed to reply to you and manage registration, then we delete them."
+      },
+      {
+        "title": "Your rights",
+        "text": "You can ask us at any time to see, correct or delete your data by writing to: ⁦info@aba-demy.com⁩"
+      },
+      {
+        "title": "Changes to this policy",
+        "text": "We may update this page when needed; the date of the last update is shown at the top."
       }
     ]
   }

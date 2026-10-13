@@ -1048,3 +1048,9 @@ body.ltr .library-cta::after { content: ' \2192'; }
     .store-grid { grid-template-columns: 1fr; }
     .cart-drawer { width: 100%; }
 }
+
+/* ---- privacy page + footer legal link ---- */
+.policy-h { color: var(--navy); font-size: 22px; margin: 30px 0 8px; }
+.policy-p { font-size: 17px; line-height: 1.9; color: var(--ink); margin: 0 0 8px; }
+.form-note a, .footer-legal a { color: inherit; text-decoration: underline; }
+.footer-legal { text-align: center; font-size: 13px; opacity: .75; margin-top: 8px; }

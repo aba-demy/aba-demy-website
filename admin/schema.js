@@ -165,6 +165,9 @@
       fields: [
         h('صفحة عن الأكاديمية'), t('about_page.eyebrow', 'العنوان الصغير'), t('about_page.title', 'العنوان'),
         h('صفحة الخدمات'), t('services_page.eyebrow', 'العنوان الصغير'), t('services_page.title', 'العنوان'), ta('services_page.message', 'الرسالة'), t('services_page.cta', 'نص الزر الأول'), t('services_page.back_cta', 'نص الزر الثاني'),
+        h('صفحة سياسة الخصوصية'),
+        t('privacy_page.eyebrow', 'العنوان الصغير'), t('privacy_page.title', 'العنوان'), ta('privacy_page.intro', 'الفقرة التعريفية'), t('privacy_page.updated', 'تاريخ آخر تحديث'), t('privacy_page.link_label', 'نص رابط «سياسة الخصوصية» (تحت النماذج وفي التذييل)'),
+        { k: 'privacy_page.sections', l: 'أقسام السياسة', t: 'list', itemName: 'قسم', fields: [t('title', 'عنوان القسم'), ta('text', 'النص', { rows: 5 })] },
         h('القائمة العلوية'),
         t('nav.home', 'الرئيسية'), t('nav.about', 'عن الأكاديمية'), t('nav.programs', 'البرامج'), t('nav.why', 'لماذا نحن'), t('nav.store', 'المتجر'),
         t('nav.services', 'الخدمات'), t('nav.library', 'المكتبة'), t('nav.contact', 'تواصل معنا'), t('nav.register', 'التسجيل'), t('nav.cta', 'الزر الداكن في القائمة'),
