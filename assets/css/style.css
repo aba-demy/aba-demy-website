@@ -188,6 +188,26 @@ body.ltr .logo a { font-family: 'Plus Jakarta Sans', sans-serif; }
 }
 .lang-switch:hover { border-color: var(--navy); background: var(--navy-soft); }
 
+/* Mobile menu button (three lines) — hidden on desktop */
+.nav-toggle {
+    display: none;
+    width: 44px; height: 44px;
+    border: 1.5px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.nav-toggle span { display: block; width: 20px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform .25s, opacity .2s; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 /* ==========================
    HERO
 ========================== */
@@ -919,9 +939,23 @@ body.ltr .announce-bar .announce-track { direction: ltr; }
 }
 
 @media (max-width: 768px) {
-    html { scroll-padding-top: 230px; }
-    .navbar { flex-wrap: wrap; justify-content: center; gap: 14px; }
-    .nav-links { gap: 18px; order: 3; width: 100%; justify-content: center; flex-wrap: wrap; }
+    html { scroll-padding-top: 96px; }
+    /* Header: logo + cart + three-line button; everything else lives in the menu */
+    .navbar { flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 10px; padding: 12px 0; }
+    .logo { margin-inline-end: auto; }
+    .logo img { height: 40px; }
+    .logo a { font-size: 21px; }
+    .nav-actions { display: contents; }
+    .cart-btn { order: 2; }
+    .nav-toggle { display: flex; order: 3; }
+    .nav-links { display: none; order: 4; width: 100%; flex-direction: column; gap: 0; padding-top: 6px; border-top: 1px solid var(--line); }
+    .nav-links a { display: block; padding: 13px 4px; font-size: 16px; border-bottom: 1px solid var(--line); }
+    .lang-switch { display: none; order: 5; }
+    .nav-actions .btn-primary { display: none; order: 6; }
+    header.menu-open .nav-links { display: flex; }
+    header.menu-open .lang-switch { display: block; text-align: center; padding: 11px 18px; }
+    header.menu-open .nav-actions .btn-primary { display: block; flex: 1; text-align: center; }
+    header.menu-open .navbar { padding-bottom: 16px; }
     .hero { padding: 60px 16px 80px; }
     .hero h1 { font-size: 34px; }
     .hero p { font-size: 17px; }

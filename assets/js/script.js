@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     initAnnounceBar();
+    initNavToggle();
     document.addEventListener('cms-content-loaded', function (e) { initOptionalSocialLinks(e.detail); });
 
     const form = document.querySelector('.register-form');
@@ -134,4 +135,38 @@ function initOptionalSocialLinks(data) {
             existing.remove();
         }
     });
+}
+
+
+// Mobile menu: the three-line button shows / hides links, language switch and register button.
+function initNavToggle() {
+    var header = document.querySelector('header');
+    var btn = document.getElementById('nav-toggle');
+    if (!header || !btn) return;
+
+    function setOpen(open) {
+        header.classList.toggle('menu-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    btn.addEventListener('click', function () {
+        setOpen(!header.classList.contains('menu-open'));
+    });
+    // close after choosing something in the menu
+    header.addEventListener('click', function (e) {
+        if (e.target.closest('.nav-links a, .lang-switch, .nav-actions .btn-primary')) setOpen(false);
+    });
+    // close when tapping outside, or pressing Escape
+    document.addEventListener('click', function (e) {
+        if (!header.contains(e.target)) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+    });
+    // returning to a wide screen resets the menu
+    if (window.matchMedia) {
+        var mq = window.matchMedia('(min-width: 769px)');
+        var onChange = function (ev) { if (ev.matches) setOpen(false); };
+        if (mq.addEventListener) mq.addEventListener('change', onChange);
+    }
 }
