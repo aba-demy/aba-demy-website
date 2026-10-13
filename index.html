@@ -51,7 +51,7 @@
             <h3 data-cms="store_page.cart_title">سلة المشتريات</h3>
             <button type="button" class="cart-close" id="cart-close" aria-label="إغلاق السلة">✕</button>
         </div>
-        <div class="cart-items" id="cart-items" data-empty-label="السلة فارغة حاليًا.">
+        <div class="cart-items" id="cart-items" data-empty-label="السلة فارغة حاليًا." data-cms-attr="data-empty-label:store_page.cart_empty">
             <p class="cart-empty-msg">السلة فارغة حاليًا.</p>
         </div>
         <div class="cart-footer">
@@ -84,7 +84,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/icon-navy.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <img src="assets/images/icon-navy.png" data-cms-attr="alt:brand.name|src:images.logo_header" alt="ABA Demy">
                         <span data-cms="brand.name">ABA Demy</span>
                     </a>
                 </div>
@@ -374,8 +374,8 @@
                 <p data-cms="accreditation.description">برامجنا التدريبية مقدَّمة من جهة معتمدة رسميًا من البورد الأمريكي QABA كمزوّد تدريب معتمد.</p>
             </div>
             <div class="accreditation-badges">
-                <img src="assets/images/qaba-badge-1.jpeg" alt="QABA Approved Coursework Provider">
-                <img src="assets/images/qaba-badge-2.jpeg" alt="QABA Approved Training Program">
+                <img src="assets/images/qaba-badge-1.jpeg" data-cms-attr="src:images.qaba_badge_1" alt="QABA Approved Coursework Provider">
+                <img src="assets/images/qaba-badge-2.jpeg" data-cms-attr="src:images.qaba_badge_2" alt="QABA Approved Training Program">
             </div>
         </div>
     </section>
@@ -431,34 +431,35 @@
                 </div>
 
                 <form class="register-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="5b5fd8d2-0c97-4e56-983d-db5016750f2a">
+                    <input type="hidden" name="access_key" value="5b5fd8d2-0c97-4e56-983d-db5016750f2a" data-cms-attr="value:forms.access_key">
                     <input type="hidden" name="subject" value="طلب تسجيل جديد — ABA Demy" data-cms-attr="value:register.form_subject">
                     <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
                     <div class="field">
-                        <label for="name">الاسم الكامل</label>
+                        <label for="name" data-cms="register.form_name_label">الاسم الكامل</label>
                         <input type="text" id="name" name="الاسم" required>
                     </div>
 
                     <div class="field-row">
                         <div class="field">
-                            <label for="email">البريد الإلكتروني</label>
+                            <label for="email" data-cms="register.form_email_label">البريد الإلكتروني</label>
                             <input type="email" id="email" name="البريد" required>
                         </div>
                         <div class="field">
-                            <label for="phone">الهاتف / واتساب</label>
+                            <label for="phone" data-cms="register.form_phone_label">الهاتف / واتساب</label>
                             <input type="tel" id="phone" name="الهاتف" required>
                         </div>
                     </div>
 
                     <div class="field-row">
                         <div class="field">
-                            <label for="city">المدينة</label>
+                            <label for="city" data-cms="register.form_city_label">المدينة</label>
                             <input type="text" id="city" name="المدينة" required>
                         </div>
                         <div class="field">
-                            <label for="program">البرنامج المطلوب</label>
-                            <select id="program" name="البرنامج" required>
+                            <label for="program" data-cms="register.form_program_label">البرنامج المطلوب</label>
+                            <select id="program" name="البرنامج" required data-cms-list="register.form_program_options">
+                                <template><option data-cms="text" data-cms-attr="value:value"></option></template>
                                 <option value="ABAT">فني السلوك ABAT</option>
                                 <option value="QASP">ممارس مؤهل QASP (قريبًا)</option>
                             </select>
@@ -466,12 +467,12 @@
                     </div>
 
                     <div class="field">
-                        <label for="background">خلفيتك المهنية</label>
-                        <textarea id="background" name="الخلفية_المهنية" rows="3"
+                        <label for="background" data-cms="register.form_background_label">خلفيتك المهنية</label>
+                        <textarea id="background" name="الخلفية_المهنية" rows="3" data-cms-attr="placeholder:register.form_background_placeholder"
                             placeholder="مثال: أخصائي تربية خاصة، معالج نطق، طالب، ولي أمر..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary btn-block">إرسال الطلب</button>
+                    <button type="submit" class="btn-primary btn-block" data-cms="register.form_submit">إرسال الطلب</button>
                     <p class="form-note" data-cms="register.form_note">لن نشارك بياناتك مع أي جهة خارجية.</p>
                 </form>
             </div>
@@ -484,7 +485,7 @@
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <img src="assets/images/icon-cream.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <img src="assets/images/icon-cream.png" data-cms-attr="alt:brand.name|src:images.logo_footer" alt="ABA Demy">
                         <span data-cms="brand.name">ABA Demy</span>
                     </div>
                     <p data-cms="footer.tagline">أكاديمية تأهيل أخصائيي تحليل السلوك التطبيقي في سوريا.</p>

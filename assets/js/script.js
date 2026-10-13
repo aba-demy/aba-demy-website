@@ -3,9 +3,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     initAnnounceBar();
     initNavToggle();
+    // keep ?query / #hash when switching language (e.g. register.html?program=ID)
+    document.querySelectorAll('.lang-switch').forEach(function (a) {
+        if (location.search || location.hash) a.setAttribute('href', a.getAttribute('href') + location.search + location.hash);
+    });
     document.addEventListener('cms-content-loaded', function (e) { initOptionalSocialLinks(e.detail); });
 
-    const form = document.querySelector('.register-form');
+    const form = document.querySelector('.register-form:not([data-custom-submit])');
     if (!form) return;
 
     const isArabic = document.documentElement.lang === 'ar';

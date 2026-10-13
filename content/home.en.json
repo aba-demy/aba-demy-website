@@ -10,8 +10,12 @@
   },
   "banner": {
     "items": [
-      { "text": "Registration is now open for the first ABAT cohort — seats are limited" },
-      { "text": "The QASP program launches soon for professionals seeking career advancement" }
+      {
+        "text": "Registration is now open for the first ABAT cohort — seats are limited"
+      },
+      {
+        "text": "The QASP program launches soon for professionals seeking career advancement"
+      }
     ]
   },
   "nav": {
@@ -34,10 +38,22 @@
     "cta_secondary": "View Programs"
   },
   "stats": [
-    { "number": "40", "label": "Hours of theory" },
-    { "number": "15", "label": "Hours of supervised practice" },
-    { "number": "30", "label": "Trainees in year one" },
-    { "number": "1:36", "label": "1 in 36 children has autism" }
+    {
+      "number": "40",
+      "label": "Hours of theory"
+    },
+    {
+      "number": "15",
+      "label": "Hours of supervised practice"
+    },
+    {
+      "number": "30",
+      "label": "Trainees in year one"
+    },
+    {
+      "number": "1:36",
+      "label": "1 in 36 children has autism"
+    }
   ],
   "about": {
     "eyebrow": "About",
@@ -49,29 +65,66 @@
     "eyebrow": "ABA Demy",
     "title": "More Than a Training Platform",
     "items": [
-      { "icon": "#icon-training", "title": "Specialized Training" },
-      { "icon": "#icon-content", "title": "Scientific Content" },
-      { "icon": "#icon-practice", "title": "Practical Application" },
-      { "icon": "#icon-community", "title": "Professional Community" }
+      {
+        "icon": "#icon-training",
+        "title": "Specialized Training"
+      },
+      {
+        "icon": "#icon-content",
+        "title": "Scientific Content"
+      },
+      {
+        "icon": "#icon-practice",
+        "title": "Practical Application"
+      },
+      {
+        "icon": "#icon-community",
+        "title": "Professional Community"
+      }
     ]
   },
   "philosophy": {
     "eyebrow": "Our Philosophy",
     "title_html": "Knowledge doesn't end at learning..<br>it begins at application",
     "items": [
-      { "label": "Science", "text": "Everything we offer is grounded in evidence-based practice." },
-      { "label": "Application", "text": "We focus on turning knowledge into applicable skills." },
-      { "label": "Impact", "text": "Our goal is to raise service quality and improve the lives of those we serve." }
+      {
+        "label": "Science",
+        "text": "Everything we offer is grounded in evidence-based practice."
+      },
+      {
+        "label": "Application",
+        "text": "We focus on turning knowledge into applicable skills."
+      },
+      {
+        "label": "Impact",
+        "text": "Our goal is to raise service quality and improve the lives of those we serve."
+      }
     ]
   },
   "offerings": {
     "eyebrow": "What We Offer",
     "title": "Everything a practitioner and family need, in one place",
     "items": [
-      { "icon": "#icon-programs", "title": "Specialized Training Programs", "description": "In Applied Behavior Analysis, including the ABAT and QASP programs." },
-      { "icon": "#icon-library", "title": "Knowledge Library", "description": "Guides and educational materials supporting continuous learning and professional growth." },
-      { "icon": "#icon-workshop", "title": "Interactive Workshops & Discussions", "description": "Carrying knowledge from theory into hands-on practice." },
-      { "icon": "#icon-community", "title": "Professional Community", "description": "Connecting specialists and families to exchange expertise and strengthen collaboration." }
+      {
+        "icon": "#icon-programs",
+        "title": "Specialized Training Programs",
+        "description": "In Applied Behavior Analysis, including the ABAT and QASP programs."
+      },
+      {
+        "icon": "#icon-library",
+        "title": "Knowledge Library",
+        "description": "Guides and educational materials supporting continuous learning and professional growth."
+      },
+      {
+        "icon": "#icon-workshop",
+        "title": "Interactive Workshops & Discussions",
+        "description": "Carrying knowledge from theory into hands-on practice."
+      },
+      {
+        "icon": "#icon-community",
+        "title": "Professional Community",
+        "description": "Connecting specialists and families to exchange expertise and strengthen collaboration."
+      }
     ]
   },
   "programs": {
@@ -85,9 +138,15 @@
         "code": "ABAT",
         "description": "The entry professional level for delivering direct behavioral interventions to children. Includes 40 hours of theory and 15 hours of supervised practice with skill application, case analysis, and direct mentoring.",
         "features": [
-          { "text": "Live online theoretical training" },
-          { "text": "Practical supervision & case analysis" },
-          { "text": "International certification exam prep" }
+          {
+            "text": "Live online theoretical training"
+          },
+          {
+            "text": "Practical supervision & case analysis"
+          },
+          {
+            "text": "International certification exam prep"
+          }
         ],
         "cta": "Register for this program"
       },
@@ -98,9 +157,15 @@
         "code": "QASP",
         "description": "An advanced professional program for practitioners who want to deepen their knowledge and skills in Applied Behavior Analysis and move to a higher tier of professional competency under recognized frameworks.",
         "features": [
-          { "text": "Supervising behavior technicians" },
-          { "text": "Designing behavior programs" },
-          { "text": "Continuing education programs" }
+          {
+            "text": "Supervising behavior technicians"
+          },
+          {
+            "text": "Designing behavior programs"
+          },
+          {
+            "text": "Continuing education programs"
+          }
         ],
         "cta": "Register early interest"
       }
@@ -110,19 +175,43 @@
     "eyebrow": "Why ABA Demy",
     "title": "Balancing international standards with local reality",
     "items": [
-      { "title": "International alignment", "description": "Programs built on the requirements of international ABA credentialing bodies." },
-      { "title": "Certified supervision", "description": "Delivered under a certified behavior analyst (BCBA) and a certified autism supervisor (QASP)." },
-      { "title": "Arabic content", "description": "The first structured program available in Arabic at a cost suited to the Syrian context." },
-      { "title": "Flexible learning", "description": "Live online theory with practical supervision and continuous assessment." }
+      {
+        "title": "International alignment",
+        "description": "Programs built on the requirements of international ABA credentialing bodies."
+      },
+      {
+        "title": "Certified supervision",
+        "description": "Delivered under a certified behavior analyst (BCBA) and a certified autism supervisor (QASP)."
+      },
+      {
+        "title": "Arabic content",
+        "description": "The first structured program available in Arabic at a cost suited to the Syrian context."
+      },
+      {
+        "title": "Flexible learning",
+        "description": "Live online theory with practical supervision and continuous assessment."
+      }
     ]
   },
   "origin": {
     "eyebrow": "Why ABA Demy Was Founded",
     "title": "A story that began from a real need",
     "items": [
-      { "step": "01", "label": "The Reality", "text": "Amid rising demand for evidence-based interventions in Syria, there is a clear shortage of specialized training, Arabic-language resources, and professional services that practitioners and families need." },
-      { "step": "02", "label": "The Challenge", "text": "Practitioners faced limited opportunities for professional development and specialized qualification, while families struggled to access professional services to support their children with developmental disabilities early on." },
-      { "step": "03", "label": "This Is Where ABA Demy Began", "text": "To become one of the first specialized platforms in Syria, bringing together specialized training, educational resources, professional supervision, and family support services." }
+      {
+        "step": "01",
+        "label": "The Reality",
+        "text": "Amid rising demand for evidence-based interventions in Syria, there is a clear shortage of specialized training, Arabic-language resources, and professional services that practitioners and families need."
+      },
+      {
+        "step": "02",
+        "label": "The Challenge",
+        "text": "Practitioners faced limited opportunities for professional development and specialized qualification, while families struggled to access professional services to support their children with developmental disabilities early on."
+      },
+      {
+        "step": "03",
+        "label": "This Is Where ABA Demy Began",
+        "text": "To become one of the first specialized platforms in Syria, bringing together specialized training, educational resources, professional supervision, and family support services."
+      }
     ]
   },
   "register": {
@@ -131,7 +220,25 @@
     "description": "Fill in the form and our team will reach out with program details and upcoming cohort dates. Seats are limited (15 trainees per cohort).",
     "whatsapp_label": "Or contact us directly on WhatsApp",
     "form_subject": "New Registration — ABA Demy",
-    "form_note": "We won't share your data with any third party."
+    "form_note": "We won't share your data with any third party.",
+    "form_name_label": "Full name",
+    "form_email_label": "Email",
+    "form_phone_label": "Phone / WhatsApp",
+    "form_city_label": "City",
+    "form_program_label": "Program",
+    "form_program_options": [
+      {
+        "value": "ABAT",
+        "text": "ABAT Technician"
+      },
+      {
+        "value": "QASP",
+        "text": "QASP Specialist (soon)"
+      }
+    ],
+    "form_background_label": "Professional background",
+    "form_background_placeholder": "e.g. special education specialist, speech therapist, student, parent...",
+    "form_submit": "Submit request"
   },
   "footer": {
     "tagline": "Training Applied Behavior Analysis professionals in Syria.",
@@ -150,7 +257,8 @@
     "phone_href": "tel:+966551538431",
     "facebook_url": "",
     "instagram_url": "https://www.instagram.com/aba.demy",
-    "linkedin_url": ""
+    "linkedin_url": "",
+    "whatsapp_number": "966551538431"
   },
   "about_page": {
     "eyebrow": "About Us",
@@ -165,10 +273,28 @@
   },
   "library_page": {
     "eyebrow": "Knowledge Library",
-    "title": "Our knowledge library is coming soon",
+    "title": "Knowledge Library",
     "message": "The library will feature guides and educational materials that support continuous learning and professional practice for both specialists and families.",
     "cta": "Contact Us",
-    "back_cta": "Back to Home"
+    "back_cta": "Back to Home",
+    "intro": "Guides and learning materials that support continuous learning and professional practice.",
+    "empty_title": "Knowledge Library Coming Soon",
+    "types": {
+      "article": "Article",
+      "pdf": "PDF file",
+      "video": "Video",
+      "link": "Link",
+      "page": "Interactive page"
+    },
+    "open_labels": {
+      "article": "Read the article",
+      "pdf": "Open the file",
+      "video": "Watch the video",
+      "link": "Open the link",
+      "page": "Open the page"
+    },
+    "not_found": "We couldn't find this item.",
+    "back_to_library": "Back to the library"
   },
   "contact_page": {
     "eyebrow": "Contact Us",
@@ -178,11 +304,21 @@
     "form_email_label": "Email",
     "form_type_label": "Inquiry Type",
     "form_type_options": [
-      { "text": "Training Programs" },
-      { "text": "Family Services" },
-      { "text": "Specialist Services" },
-      { "text": "Partnerships" },
-      { "text": "Other" }
+      {
+        "text": "Training Programs"
+      },
+      {
+        "text": "Family Services"
+      },
+      {
+        "text": "Specialist Services"
+      },
+      {
+        "text": "Partnerships"
+      },
+      {
+        "text": "Other"
+      }
     ],
     "form_message_label": "Message",
     "form_submit": "Send Message",
@@ -193,7 +329,7 @@
   "store_page": {
     "eyebrow": "Store",
     "title": "Our Courses & Programs",
-    "intro": "Choose the program or course that fits you, add it to your cart, and complete your order directly via WhatsApp.",
+    "intro": "Choose the program or course that suits you, then register directly or add it to the cart and complete your order on WhatsApp.",
     "cart_title": "Your Cart",
     "cart_empty": "Your cart is empty.",
     "cart_total_label": "Total",
@@ -202,7 +338,8 @@
     "add_to_cart": "Add to Cart",
     "added_label": "Added ✓",
     "whatsapp_order_intro": "Hello, I'd like to register for:",
-    "whatsapp_order_total": "Estimated total:"
+    "whatsapp_order_total": "Estimated total:",
+    "register_btn": "Register now"
   },
   "store": {
     "currency": "$",
@@ -214,7 +351,9 @@
         "price": 150,
         "location": "Damascus University halls or Sham Hotel — Damascus",
         "description": "The full ABAT program (theory + supervised practice), delivered in person in Damascus.",
-        "badge": "Most Popular"
+        "badge": "Most Popular",
+        "icon": "#icon-programs",
+        "price_note": "/ per trainee"
       },
       {
         "id": "abat-online",
@@ -223,7 +362,9 @@
         "price": 100,
         "location": "",
         "description": "The same ABAT content — live theoretical training and supervised practice online from anywhere.",
-        "badge": ""
+        "badge": "",
+        "icon": "#icon-practice",
+        "price_note": "/ per trainee"
       },
       {
         "id": "recorded-course",
@@ -232,7 +373,53 @@
         "price": 60,
         "location": "",
         "description": "A recorded course you can watch anytime, at your own pace, with ongoing access.",
-        "badge": ""
+        "badge": "",
+        "icon": "#icon-workshop",
+        "price_note": "/ per trainee"
+      }
+    ]
+  },
+  "images": {
+    "logo_header": "/assets/images/icon-navy.png",
+    "logo_footer": "/assets/images/icon-cream.png",
+    "qaba_badge_1": "/assets/images/qaba-badge-1.jpeg",
+    "qaba_badge_2": "/assets/images/qaba-badge-2.jpeg"
+  },
+  "forms": {
+    "access_key": "5b5fd8d2-0c97-4e56-983d-db5016750f2a"
+  },
+  "register_page": {
+    "eyebrow": "Registration",
+    "title": "Register for the program",
+    "intro": "Fill in the form below and our team will contact you to confirm your registration and the next steps.",
+    "program_label": "Program",
+    "select_program": "Choose a program",
+    "name_label": "Full name",
+    "email_label": "Email",
+    "phone_label": "Phone / WhatsApp",
+    "city_label": "City",
+    "background_label": "Professional background (optional)",
+    "background_placeholder": "e.g. special education specialist, speech therapist, student, parent...",
+    "submit": "Send registration request",
+    "sending": "Sending...",
+    "success_title": "We received your request",
+    "success_message": "Thank you. Our team will contact you shortly to confirm your registration.",
+    "error_message": "Could not send. Please try again or contact us on WhatsApp.",
+    "back_to_store": "Back to the store",
+    "whatsapp_label": "Or contact us directly on WhatsApp",
+    "subject_prefix": "New registration — "
+  },
+  "library": {
+    "items": [
+      {
+        "id": "abat-map",
+        "type": "page",
+        "title": "ABAT Terminology Map",
+        "summary": "An interactive map linking Applied Behavior Analysis terms for the behavior technician level, with learning paths and discussion scenarios.",
+        "url": "/en/map/",
+        "image": "/map/og-image.jpg",
+        "date": "",
+        "body": ""
       }
     ]
   }

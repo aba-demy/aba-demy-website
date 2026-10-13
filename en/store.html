@@ -62,7 +62,7 @@
             <h3 data-cms="store_page.cart_title">Your Cart</h3>
             <button type="button" class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
         </div>
-        <div class="cart-items" id="cart-items" data-empty-label="Your cart is empty.">
+        <div class="cart-items" id="cart-items" data-empty-label="Your cart is empty." data-cms-attr="data-empty-label:store_page.cart_empty">
             <p class="cart-empty-msg">Your cart is empty.</p>
         </div>
         <div class="cart-footer">
@@ -95,7 +95,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="../assets/images/icon-navy.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <img src="../assets/images/icon-navy.png" data-cms-attr="alt:brand.name|src:images.logo_header" alt="ABA Demy">
                         <span data-cms="brand.name">ABA Demy</span>
                     </a>
                 </div>
@@ -128,40 +128,59 @@
         <div class="container">
             <span class="section-eyebrow" data-cms="store_page.eyebrow">Store</span>
             <h1 data-cms="store_page.title">Our Courses & Programs</h1>
-            <p data-cms="store_page.intro">Choose the program or course that fits you, add it to your cart, and complete your order directly via WhatsApp.</p>
+            <p data-cms="store_page.intro">Choose the program or course that suits you, then register directly or add it to the cart and complete your order on WhatsApp.</p>
         </div>
     </section>
 
     <!-- STORE GRID -->
     <section class="programs">
         <div class="container">
-            <div class="store-grid">
+            <div class="store-grid" data-cms-list="store.items">
+                <template>
+                    <div class="store-card">
+                        <span class="store-badge" data-cms="badge" data-cms-show="badge"></span>
+                        <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-programs" data-cms-attr="href:icon"></use></svg><span data-cms="type"></span></span>
+                        <h3 data-cms="name"></h3>
+                        <div class="store-location" data-cms-show="location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-cms="location"></span></div>
+                        <p class="store-desc" data-cms="description"></p>
+                        <div class="store-price"><b class="store-amount" data-cms="price" data-cms-pre="$"></b> <span data-cms="price_note"></span></div>
+                        <div class="store-actions">
+                            <button type="button" class="btn-primary store-add-btn" data-store-add="" data-name="" data-price="" data-added-label="" data-cms="/store_page.add_to_cart" data-cms-attr="data-store-add:id|data-name:name|data-price:price|data-added-label:/store_page.added_label"></button>
+                            <a class="btn-ghost store-register-btn" href="register.html" data-register-id="" data-cms="/store_page.register_btn" data-cms-attr="data-register-id:id"></a>
+                        </div>
+                    </div>
+                </template>
                 <div class="store-card">
                     <span class="store-badge">Most Popular</span>
-                    <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-programs"></use></svg>In-Person</span>
+                    <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-programs"></use></svg><span>In-Person</span></span>
                     <h3>ABAT Program — In-Person</h3>
                     <div class="store-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Damascus University halls or Sham Hotel — Damascus</span></div>
                     <p class="store-desc">The full ABAT program (theory + supervised practice), delivered in person in Damascus.</p>
-                    <div class="store-price">$150 <span>/ per trainee</span></div>
-                    <button type="button" class="btn-primary store-add-btn" data-store-add="abat-in-person" data-name="ABAT Program — In-Person" data-price="150" data-added-label="Added ✓">Add to Cart</button>
+                    <div class="store-price"><b class="store-amount">$150</b> <span>/ per trainee</span></div>
+                    <div class="store-actions">
+                        <button type="button" class="btn-primary store-add-btn" data-store-add="abat-in-person" data-name="ABAT Program — In-Person" data-price="150" data-added-label="Added ✓">Add to Cart</button>
+                        <a class="btn-ghost store-register-btn" href="register.html?program=abat-in-person" data-register-id="abat-in-person">Register now</a>
+                    </div>
                 </div>
                 <div class="store-card">
-                    
-                    <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-practice"></use></svg>Online</span>
+                    <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-practice"></use></svg><span>Online</span></span>
                     <h3>ABAT Program — Online</h3>
-                    
                     <p class="store-desc">The same ABAT content — live theoretical training and supervised practice online from anywhere.</p>
-                    <div class="store-price">$100 <span>/ per trainee</span></div>
-                    <button type="button" class="btn-primary store-add-btn" data-store-add="abat-online" data-name="ABAT Program — Online" data-price="100" data-added-label="Added ✓">Add to Cart</button>
+                    <div class="store-price"><b class="store-amount">$100</b> <span>/ per trainee</span></div>
+                    <div class="store-actions">
+                        <button type="button" class="btn-primary store-add-btn" data-store-add="abat-online" data-name="ABAT Program — Online" data-price="100" data-added-label="Added ✓">Add to Cart</button>
+                        <a class="btn-ghost store-register-btn" href="register.html?program=abat-online" data-register-id="abat-online">Register now</a>
+                    </div>
                 </div>
                 <div class="store-card">
-                    
-                    <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-workshop"></use></svg>Recorded</span>
+                    <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-workshop"></use></svg><span>Recorded</span></span>
                     <h3>Recorded Course</h3>
-                    
                     <p class="store-desc">A recorded course you can watch anytime, at your own pace, with ongoing access.</p>
-                    <div class="store-price">$60 <span>/ per trainee</span></div>
-                    <button type="button" class="btn-primary store-add-btn" data-store-add="recorded-course" data-name="Recorded Course" data-price="60" data-added-label="Added ✓">Add to Cart</button>
+                    <div class="store-price"><b class="store-amount">$60</b> <span>/ per trainee</span></div>
+                    <div class="store-actions">
+                        <button type="button" class="btn-primary store-add-btn" data-store-add="recorded-course" data-name="Recorded Course" data-price="60" data-added-label="Added ✓">Add to Cart</button>
+                        <a class="btn-ghost store-register-btn" href="register.html?program=recorded-course" data-register-id="recorded-course">Register now</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,7 +192,7 @@
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <img src="../assets/images/icon-cream.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <img src="../assets/images/icon-cream.png" data-cms-attr="alt:brand.name|src:images.logo_footer" alt="ABA Demy">
                         <span data-cms="brand.name">ABA Demy</span>
                     </div>
                     <p data-cms="footer.tagline">Training Applied Behavior Analysis professionals in Syria.</p>

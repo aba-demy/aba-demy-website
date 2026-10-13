@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fill in the form below and our team will contact you to confirm your registration and the next steps.">
+    <meta name="robots" content="noindex">
+    <meta name="author" content="ABA Demy">
+    <title>Register for the program | ABA Demy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="ltr" data-content-base="../">
+
+    <!-- ICON SPRITE (referenced via <use> — keeps icons CMS-friendly) -->
+    <svg style="display:none" aria-hidden="true">
+        <symbol id="icon-training" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5"/>
+        </symbol>
+        <symbol id="icon-content" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 6C10 4.5 7 4 4 4v13c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2Z"/><path d="M12 6v13"/>
+        </symbol>
+        <symbol id="icon-practice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>
+        </symbol>
+        <symbol id="icon-community" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17.5" cy="9" r="2.3"/><path d="M16 14.2c2.8.4 5 2.4 5 5.8"/>
+        </symbol>
+        <symbol id="icon-programs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/>
+        </symbol>
+        <symbol id="icon-library" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="4" height="16" rx="1"/><rect x="9" y="4" width="4" height="16" rx="1"/><rect x="15" y="4" width="6" height="16" rx="1"/>
+        </symbol>
+        <symbol id="icon-workshop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H9l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/>
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/>
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+        </symbol>
+    </svg>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Your Cart">
+        <div class="cart-header">
+            <h3 data-cms="store_page.cart_title">Your Cart</h3>
+            <button type="button" class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items" data-empty-label="Your cart is empty." data-cms-attr="data-empty-label:store_page.cart_empty">
+            <p class="cart-empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span data-cms="store_page.cart_total_label">Total</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <button type="button" class="btn-primary btn-block" id="cart-checkout-btn" data-cms="store_page.cart_checkout">Checkout via WhatsApp</button>
+            <button type="button" class="cart-clear-btn" id="cart-clear-btn" data-cms="store_page.cart_clear">Clear Cart</button>
+        </div>
+    </aside>
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="announce-bar" id="announce-bar">
+        <div class="announce-track" data-cms-list="banner.items">
+            <template>
+                <span data-cms="text"></span>
+            </template>
+            <span>Registration is now open for the first ABAT cohort — seats are limited</span>
+            <span>The QASP program launches soon for professionals seeking career advancement</span>
+            <span>Registration is now open for the first ABAT cohort — seats are limited</span>
+            <span>The QASP program launches soon for professionals seeking career advancement</span>
+        </div>
+        <button class="announce-close" id="announce-close" aria-label="Close">✕</button>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../assets/images/icon-navy.png" data-cms-attr="alt:brand.name|src:images.logo_header" alt="ABA Demy">
+                        <span data-cms="brand.name">ABA Demy</span>
+                    </a>
+                </div>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" data-cms="nav.home">Home</a></li>
+                    <li><a href="about.html" data-cms="nav.about">About</a></li>
+                    <li><a href="index.html#programs" data-cms="nav.programs">Programs</a></li>
+                    <li><a href="store.html" data-cms="nav.store">Store</a></li>
+                    <li><a href="services.html" data-cms="nav.services">Services</a></li>
+                    <li><a href="library.html" data-cms="nav.library">Knowledge Library</a></li>
+                    <li><a href="contact.html" data-cms="nav.contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button type="button" class="cart-btn" id="cart-btn" aria-label="Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        <span class="cart-badge hidden" id="cart-badge">0</span>
+                    </button>
+                    <a href="../register.html" class="lang-switch">ع</a>
+                    <a href="index.html#register" class="btn-primary" data-cms="nav.cta">Register Interest</a>
+                </div>
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- REGISTRATION -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-eyebrow" data-cms="register_page.eyebrow">Registration</span>
+            <h1 data-cms="register_page.title">Register for the program</h1>
+            <p data-cms="register_page.intro">Fill in the form below and our team will contact you to confirm your registration and the next steps.</p>
+        </div>
+    </section>
+
+    <section class="register-page">
+        <div class="register-page-wrap">
+            <aside class="reg-summary" id="reg-summary" aria-live="polite">
+                <span class="store-type"><svg style="width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-inline-end:4px"><use href="#icon-programs"></use></svg><span id="reg-type">In-Person</span></span>
+                <h3 id="reg-name">ABAT Program — In-Person</h3>
+                <p class="store-desc" id="reg-desc">The full ABAT program (theory + supervised practice), delivered in person in Damascus.</p>
+                <div class="store-price"><b class="store-amount" id="reg-price">$150</b> <span id="reg-price-note">/ per trainee</span></div>
+            </aside>
+
+            <div class="reg-card">
+                <form class="register-form" id="reg-form" data-custom-submit action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="5b5fd8d2-0c97-4e56-983d-db5016750f2a" data-cms-attr="value:forms.access_key">
+                    <input type="hidden" name="subject" id="reg-subject" value="New registration — ABAT Program — In-Person">
+                    <input type="hidden" name="from_name" value="ABA Demy">
+                    <input type="hidden" name="program_id" id="reg-program-id" value="abat-in-person">
+                    <input type="hidden" name="Site language" value="English">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
+
+                    <div class="field">
+                        <label for="reg-program" data-cms="register_page.program_label">Program</label>
+                        <select id="reg-program" name="Program" required>
+                                <option value="ABAT Program — In-Person" data-id="abat-in-person">ABAT Program — In-Person</option>
+                                <option value="ABAT Program — Online" data-id="abat-online">ABAT Program — Online</option>
+                                <option value="Recorded Course" data-id="recorded-course">Recorded Course</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="reg-name-in" data-cms="register_page.name_label">Full name</label>
+                        <input type="text" id="reg-name-in" name="Name" required autocomplete="name">
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="reg-email" data-cms="register_page.email_label">Email</label>
+                            <input type="email" id="reg-email" name="email" required autocomplete="email" dir="ltr">
+                        </div>
+                        <div class="field">
+                            <label for="reg-phone" data-cms="register_page.phone_label">Phone / WhatsApp</label>
+                            <input type="tel" id="reg-phone" name="Phone" required autocomplete="tel" dir="ltr">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="reg-city" data-cms="register_page.city_label">City</label>
+                        <input type="text" id="reg-city" name="City" required>
+                    </div>
+                    <div class="field">
+                        <label for="reg-bg" data-cms="register_page.background_label">Professional background (optional)</label>
+                        <textarea id="reg-bg" name="Professional background" rows="3" data-cms-attr="placeholder:register_page.background_placeholder" placeholder="e.g. special education specialist, speech therapist, student, parent..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block" id="reg-submit" data-cms="register_page.submit">Send registration request</button>
+                    <p class="form-note" data-cms="register.form_note">We won&#x27;t share your data with any third party.</p>
+                    <p class="submit-result" id="reg-error" role="alert" hidden data-cms="register_page.error_message">Could not send. Please try again or contact us on WhatsApp.</p>
+                </form>
+
+                <div class="reg-done" id="reg-done" hidden>
+                    <h2 data-cms="register_page.success_title">We received your request</h2>
+                    <p data-cms="register_page.success_message">Thank you. Our team will contact you shortly to confirm your registration.</p>
+                    <div class="coming-soon-actions">
+                        <a href="store.html" class="btn-primary" data-cms="register_page.back_to_store">Back to the store</a>
+                        <a href="https://wa.me/966551538431" target="_blank" rel="noopener" class="btn-ghost" data-cms="register_page.whatsapp_label" data-cms-attr="href:contact.whatsapp_url">Or contact us directly on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="../assets/images/icon-cream.png" data-cms-attr="alt:brand.name|src:images.logo_footer" alt="ABA Demy">
+                        <span data-cms="brand.name">ABA Demy</span>
+                    </div>
+                    <p data-cms="footer.tagline">Training Applied Behavior Analysis professionals in Syria.</p>
+                    <div class="footer-social" id="footer-social">
+                        <a href="tel:+966551538431" data-cms-attr="href:contact.phone_href" aria-label="Call">
+                            <svg viewBox="0 0 24 24"><use href="#icon-whatsapp"></use></svg>
+                        </a>
+                        <a href="mailto:info@aba-demy.com" data-cms-attr="href:contact.email_href" aria-label="Email">
+                            <svg viewBox="0 0 24 24"><use href="#icon-mail"></use></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <a href="https://wa.me/966551538431" target="_blank" rel="noopener"
+                        data-cms="contact.whatsapp_display" data-cms-attr="href:contact.whatsapp_url">WhatsApp: +966 55 153 8431</a>
+                    <a href="mailto:info@aba-demy.com" data-cms="contact.email"
+                        data-cms-attr="href:contact.email_href">info@aba-demy.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom" data-cms="footer.copyright">
+                © 2026 ABA Demy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/content-loader.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/store.js"></script>
+    <script src="../assets/js/register.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,13 @@
 
 (function () {
     var CART_KEY = 'aba-demy-cart';
-    var WHATSAPP_NUMBER = '966551538431';
+    var DEFAULT_WHATSAPP = '966551538431';
+    function whatsappNumber() {
+        var c = window.ABA_CONTENT;
+        var n = c && c.contact && c.contact.whatsapp_number;
+        n = String(n || '').replace(/[^0-9]/g, '');
+        return n || DEFAULT_WHATSAPP;
+    }
     var isArabic = document.documentElement.lang === 'ar';
 
     var STR = isArabic ? {
@@ -147,7 +153,7 @@
             return '- ' + item.name + ' × ' + item.qty + ' (' + STR.currency + (item.qty * item.price) + ')';
         });
         var text = STR.orderIntro + '\n' + lines.join('\n') + '\n\n' + STR.orderTotal + ' ' + STR.currency + cartTotal(cart);
-        var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
+        var url = 'https://wa.me/' + whatsappNumber() + '?text=' + encodeURIComponent(text);
         window.open(url, '_blank', 'noopener');
     }
 
@@ -180,24 +186,37 @@
             });
         }
 
-        // Add-to-cart buttons (present on the store page)
-        document.querySelectorAll('[data-store-add]').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                var id = btn.getAttribute('data-store-add');
-                var name = btn.getAttribute('data-name');
-                var price = parseFloat(btn.getAttribute('data-price'));
-                addToCart(id, name, price);
+        // Add-to-cart buttons (store page). Delegated, because the product cards
+        // are drawn from the content file after the page has loaded.
+        document.addEventListener('click', function (e) {
+            var btn = e.target.closest('[data-store-add]');
+            if (!btn) return;
+            var id = btn.getAttribute('data-store-add');
+            var name = btn.getAttribute('data-name');
+            var price = parseFloat(btn.getAttribute('data-price'));
+            if (!id || isNaN(price)) return;
+            addToCart(id, name, price);
 
-                var original = btn.textContent;
-                var addedLabel = btn.getAttribute('data-added-label') || original;
-                btn.textContent = addedLabel;
-                btn.classList.add('added');
-                setTimeout(function () {
-                    btn.textContent = original;
-                    btn.classList.remove('added');
-                }, 1400);
+            if (!btn.getAttribute('data-original-label')) btn.setAttribute('data-original-label', btn.textContent);
+            var original = btn.getAttribute('data-original-label');
+            btn.textContent = btn.getAttribute('data-added-label') || original;
+            btn.classList.add('added');
+            clearTimeout(btn._abaTimer);
+            btn._abaTimer = setTimeout(function () {
+                btn.textContent = original;
+                btn.classList.remove('added');
+                btn.removeAttribute('data-original-label');
+            }, 1400);
 
-                bumpCartButton();
+            bumpCartButton();
+        });
+
+        // Once the content file is loaded: refresh the drawer text (empty message)
+        document.addEventListener('cms-content-loaded', function () {
+            renderDrawer();
+            // each "Register" button opens the registration form with its product selected
+            document.querySelectorAll('a[data-register-id]').forEach(function (a) {
+                a.setAttribute('href', 'register.html?program=' + encodeURIComponent(a.getAttribute('data-register-id')));
             });
         });
     });

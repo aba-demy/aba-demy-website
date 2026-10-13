@@ -62,7 +62,7 @@
             <h3 data-cms="store_page.cart_title">Your Cart</h3>
             <button type="button" class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
         </div>
-        <div class="cart-items" id="cart-items" data-empty-label="Your cart is empty.">
+        <div class="cart-items" id="cart-items" data-empty-label="Your cart is empty." data-cms-attr="data-empty-label:store_page.cart_empty">
             <p class="cart-empty-msg">Your cart is empty.</p>
         </div>
         <div class="cart-footer">
@@ -95,7 +95,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="../assets/images/icon-navy.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <img src="../assets/images/icon-navy.png" data-cms-attr="alt:brand.name|src:images.logo_header" alt="ABA Demy">
                         <span data-cms="brand.name">ABA Demy</span>
                     </a>
                 </div>
@@ -158,7 +158,7 @@
                 </div>
 
                 <form class="register-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="5b5fd8d2-0c97-4e56-983d-db5016750f2a">
+                    <input type="hidden" name="access_key" value="5b5fd8d2-0c97-4e56-983d-db5016750f2a" data-cms-attr="value:forms.access_key">
                     <input type="hidden" name="subject" value="New Inquiry — Contact Form" data-cms-attr="value:contact_page.form_subject">
                     <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
@@ -174,7 +174,8 @@
                         </div>
                         <div class="field">
                             <label for="c-type" data-cms="contact_page.form_type_label">Inquiry Type</label>
-                            <select id="c-type" name="Inquiry_Type" required>
+                            <select id="c-type" name="Inquiry_Type" required data-cms-list="contact_page.form_type_options">
+                                <template><option data-cms="text" data-cms-attr="value:text"></option></template>
                                 <option value="Training Programs">Training Programs</option>
                                 <option value="Family Services">Family Services</option>
                                 <option value="Specialist Services">Specialist Services</option>
@@ -202,7 +203,7 @@
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <img src="../assets/images/icon-cream.png" data-cms-attr="alt:brand.name" alt="ABA Demy">
+                        <img src="../assets/images/icon-cream.png" data-cms-attr="alt:brand.name|src:images.logo_footer" alt="ABA Demy">
                         <span data-cms="brand.name">ABA Demy</span>
                     </div>
                     <p data-cms="footer.tagline">Training Applied Behavior Analysis professionals in Syria.</p>
