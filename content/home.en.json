@@ -235,34 +235,5 @@
         "badge": ""
       }
     ]
-  },
-  "assessment_teaser": {
-    "eyebrow": "Before You Register",
-    "title": "Test Your Professional Readiness First",
-    "description": "Answer a few short questions to find out your current knowledge level in Applied Behavior Analysis and how ready you are to join the ABAT program — your result is sent to your email.",
-    "cta": "Start the Assessment"
-  },
-  "assessment_page": {
-    "eyebrow": "Assessment",
-    "title": "Test Your Knowledge and Readiness",
-    "intro": "Before registering for the program, take this short assessment to find out your baseline knowledge of Applied Behavior Analysis and how ready you currently are to join. This is an initial guidance result reviewed by our specialist team, and it will be sent to your email.",
-    "disclaimer": "This assessment is an initial guidance tool only, and does not replace a direct professional evaluation by a certified specialist.",
-    "start_cta": "Start Assessment",
-    "form_title": "Before we start, tell us a bit about you",
-    "form_name_label": "Full Name",
-    "form_email_label": "Email",
-    "form_phone_label": "Phone / WhatsApp",
-    "form_continue": "Continue to Questions",
-    "section_knowledge": "Section One: Baseline Knowledge",
-    "section_readiness": "Section Two: Professional Readiness",
-    "next_label": "Next",
-    "prev_label": "Back",
-    "submit_label": "Finish & Send Result",
-    "submitting_label": "Sending...",
-    "thankyou_title": "Thanks for completing the assessment!",
-    "thankyou_message": "We've received your answers. Our team will review your result and send you the assessment and recommendation by email within 48 business hours.",
-    "error_message": "Something went wrong while sending. Please try again or reach us on WhatsApp.",
-    "form_note": "We won't share your data with any third party.",
-    "back_home": "Back to Home"
   }
 }
