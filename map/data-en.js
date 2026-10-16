@@ -417,6 +417,20 @@ window.MAP_EN = {
    "def": "We follow the employer's requirements and the regulations for collecting, storing, transporting, and documenting data. We keep the child's papers in a safe, locked place, and carry only the minimum we need.",
    "ex": "After the session we return the child's file to its locked cabinet, and we do not leave it in the car.",
    "note": "The supervisor guides us on how to maintain confidentiality. If the data is electronic, it is uploaded only to the approved system."
+  },
+  "resist": {
+   "def": "The behavior keeps happening for a longer time after reinforcement stops. The resistance is greater if the behavior was reinforced only some of the time, that is, with Intermittent Reinforcement.",
+   "ex": "The child used to scream, and sometimes got the adults' attention and sometimes did not. When Extinction started, the screaming lasted longer than it would have if attention had come every time."
+  },
+  "respvar": {
+   "def": "New and different behaviors appearing at the start of Extinction, which the child tries in order to get the same reinforcer.",
+   "ex": "When screaming does not get the child attention, he tugs the teacher's clothes, then bangs on the table, then throws the toys.",
+   "note": "We record every new behavior we see and report it to the supervisor. We do not change the plan on our own decision."
+  },
+  "extemo": {
+   "def": "Crying or intense anger, and sometimes hitting or aggression toward others, at the start of Extinction. It is an expected side effect.",
+   "ex": "After attention stops following the screaming, the child cries hard, then hits the technician's arm.",
+   "note": "When safety is at risk, we follow the written Crisis Plan and report to the supervisor immediately."
   }
  },
  "groups": {
@@ -430,7 +444,7 @@ window.MAP_EN = {
   {
    "id": 1,
    "short": "From Principle to Reducing the Problem",
-   "ar": "From Principle to Strategy to Reducing the Problem",
+   "ar": "From Principle to Skill to Reducing the Problem",
    "line": "Reinforcement builds skills, and it is also what keeps the problem going. Pairing creates the conditioned reinforcer, the token economy uses it, and identifying the function tells us which replacement behavior to reinforce."
   },
   {
@@ -463,8 +477,8 @@ window.MAP_EN = {
    "n": 1,
    "session": 2,
    "short": "Ahmed and the Vacuum Cleaner",
-   "tag": "Path 1 · From Principle to Strategy to Reducing the Problem",
-   "situation": "Ahmed (5 years old) is in kindergarten, and a technician works with him there.\nTwo weeks ago a cleaner came into the classroom and turned on the vacuum cleaner at a very loud volume. Ahmed cried and ran out of the room. Since that day he cries whenever he sees the vacuum cleaner, even when it is switched off.\nAt tidy-up time Ahmed screams and sits on the floor, so the teacher puts the toys away herself. The supervisor suggested that the teacher give him a star for each toy he puts away and say \"Well done.\"",
+   "tag": "Path 1 · From Principle to Skill to Reducing the Problem",
+   "situation": "Ahmed is five years old and goes to kindergarten, where he receives Applied Behavior Analysis services with an Applied Behavior Analysis Technician (ABAT).\nTwo weeks ago a cleaner came into his classroom and turned on a very loud vacuum cleaner. Ahmed cried and ran out of the room. Since that day he cries whenever he sees the vacuum cleaner, even when it is switched off.\nAlso, at tidy-up time Ahmed screams and sits on the floor, so the teacher puts the toys away herself. The supervisor decided to reinforce him with a Token Economy: the teacher gives him a star for each toy he puts away and says \"Well done,\" and gives him a piece of biscuit based on a Preference Assessment.",
    "chart": null,
    "q": [
     {
@@ -475,7 +489,7 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "What process made seeing the vacuum cleaner make him cry? Is his crying here operant behavior?",
+     "t": "What process made seeing the vacuum cleaner make him cry? Is his crying here operant behavior (Operant)?",
      "terms": [
       "pairing",
       "us",
@@ -490,11 +504,13 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "The star: what kind of reinforcer is it (Conditioned Reinforcer)? Where did it get its value?",
+     "t": "The star: what kind of reinforcer (Reinforcer) is it? Where did it get its value?",
      "terms": [
       "creinf",
       "token",
-      "pairing"
+      "pairing",
+      "ureinf",
+      "prefass"
      ]
     },
     {
@@ -516,13 +532,13 @@ window.MAP_EN = {
   {
    "n": 2,
    "session": 2,
-   "short": "Ahmed and Handwashing",
+   "short": "Majd and Handwashing",
    "tag": "Path 2 · Prompting and Its Relation to Core Concepts",
-   "situation": "Ahmed (5 years old) is learning to wash his hands before lunch at home. For the past month, every time, his father stands behind him and holds his hand. He moves it under the water and over the soap, then dries it with him.\nToday his father was late from work, so his mother asked Ahmed to wash his hands. Ahmed stood in front of the sink for a full minute and did nothing.\nThen his older brother came and stood beside him and looked at his hands, and Ahmed began to wash them.",
+   "situation": "Majd (4 years old) is learning to wash his hands before lunch at home. For the past month, every time, his father stands behind him and holds his hand. He moves it under the water and over the soap, then dries it with him.\nToday his father was late from work, so his mother asked Majd to wash his hands. Majd stood in front of the sink for a full minute and did nothing.\nThen his older brother came and stood beside him and looked at his hands, and Majd began to wash them.",
    "chart": null,
    "q": [
     {
-     "t": "What problem happened? Is the cause in Ahmed or in the teaching procedure?",
+     "t": "What problem happened? Is the cause in Majd or in the teaching procedure?",
      "terms": [
       "promptdep",
       "prompting"
@@ -542,11 +558,13 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "Which stimulus do we want to end up controlling the behavior? What is this goal called?",
+     "t": "Which stimulus do we want to end up controlling the behavior? How is this stimulus built?",
      "terms": [
       "sd",
       "stimctl",
-      "sct"
+      "sct",
+      "fading",
+      "reinf"
      ]
     },
     {
@@ -556,12 +574,7 @@ window.MAP_EN = {
      ]
     }
    ],
-   "follow": {
-    "t": "How do we know from the graph that fading is working?",
-    "terms": [
-     "graph"
-    ]
-   }
+   "follow": null
   },
   {
    "n": 3,
@@ -617,9 +630,9 @@ window.MAP_EN = {
   {
    "n": 4,
    "session": 3,
-   "short": "Ahmed and Homework Time",
+   "short": "Nasser and Homework Time",
    "tag": "Path 3 · Function Determines the Procedure",
-   "situation": "Ahmed (7 years old) refuses to do his school homework at home. The supervisor asked the mother to record what happens for three days.\nEvery day the same situation repeated: the mother sits next to him and says \"Open the book,\" and Ahmed throws the pencil on the floor and cries. Then the mother says \"Okay, later\" and closes the book.\nThe mother also wrote a note: on the second day Ahmed had slept only a few hours the night before, and his crying that day was more intense.",
+   "situation": "Nasser (7 years old) refuses to do his school homework at home. The supervisor asked the mother to record what happens over three days.\nEvery day the same situation repeated: the mother sits next to him and says \"Open the book,\" and Nasser throws the pencil on the floor and cries. Then the mother says \"Okay, later\" and closes the book.\nThe mother also wrote a note: on the second day Nasser had slept only a few hours the night before, and his crying that day was more intense.",
    "chart": null,
    "q": [
     {
@@ -643,7 +656,7 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "If we chose Noncontingent Reinforcement (NCR), what would we provide on a fixed schedule? Why would attention not be suitable?",
+     "t": "If we chose Noncontingent Reinforcement (NCR), what would we provide on a fixed schedule?",
      "terms": [
       "ncr",
       "functions"
@@ -658,10 +671,12 @@ window.MAP_EN = {
     }
    ],
    "follow": {
-    "t": "If the mother withdraws the demand one time and insists another time, what happens to the behavior?",
+    "t": "If the mother does not end the homework when Nasser cries, following the supervisor's plan, what do we expect Nasser to do instead of crying and throwing the pencil?",
     "terms": [
      "functions",
-     "ext"
+     "ext",
+     "respvar",
+     "extemo"
     ]
    }
   },
@@ -670,7 +685,7 @@ window.MAP_EN = {
    "session": 3,
    "short": "Ahmed in the Playground",
    "tag": "Paths 1, 3 and 5 · Punishment, Differential Reinforcement, and Scope of Role",
-   "situation": "The technician works with Ahmed (6 years old) at school. During playground break, Ahmed clenches his fists and raises his voice, then grabs the toy from a classmate.\nThe supervisor's written plan states three things: the technician reinforces his request \"Can I play?\" with a turn in the game. Ahmed earns a star if 5 minutes pass without grabbing. And if he grabs the toy, it is taken away from him for two minutes.\nOne day the technician thought that having Ahmed sit on a chair for 10 minutes after grabbing would be more useful, but this was not in the plan.",
+   "situation": "An Applied Behavior Analysis Technician (ABAT) provides services to Ahmed (6 years old) at school. During playground break, Ahmed clenches his fists and raises his voice, then grabs the toy from a classmate.\nThe supervisor's written plan states three things: the technician reinforces his request \"Can I play?\" with a turn in the game. Ahmed earns a star if 5 minutes pass without grabbing. And if he grabs the toy, a star is taken away from the stars he has collected.\nOne day the technician thought that having Ahmed sit on a chair for 10 minutes after grabbing would be more useful, but this was not in the plan.",
    "chart": null,
    "q": [
     {
@@ -681,9 +696,10 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "What type of procedure is taking the toy away? When do we call it punishment?",
+     "t": "What type of procedure is taking the star away? When do we call it punishment?",
      "terms": [
-      "punish"
+      "punish",
+      "token"
      ]
     },
     {
@@ -701,7 +717,7 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "Why shouldn't we rely only on taking the toy away without reinforcing the replacement behavior?",
+     "t": "Why shouldn't we rely only on taking the star away without reinforcing the replacement behavior?",
      "terms": [
       "replace",
       "punish"
@@ -709,7 +725,7 @@ window.MAP_EN = {
     }
    ],
    "follow": {
-    "t": "If Ahmed grabbed the toy and we did not take it away, which principle is at work?",
+    "t": "If Ahmed grabbed the toy and no star was taken away, which principle is at work?",
     "terms": [
      "reinf",
      "posr"
@@ -719,9 +735,9 @@ window.MAP_EN = {
   {
    "n": 6,
    "session": 3,
-   "short": "Ahmed and the Extinction Burst",
+   "short": "Ibrahim and the Extinction Burst",
    "tag": "Path 4 · Measurement Informs the Decision",
-   "situation": "Ahmed (5 years old) screams in center sessions to get the attention of those around him. The supervisor's plan calls for Extinction, meaning we do not pay attention to his screaming, and we do pay attention when he asks with words.\nThe technician records the number of screams each day in a session of fixed length. Before the plan started, in Baseline, he recorded 6, then 7, then 6 screams. After the plan started he recorded 9, then 11, then 8, then 5, then 3.\nOn the second day of the plan, the supervisor attended and recorded in parallel with the technician. The technician recorded 11 screams and the supervisor recorded 8.",
+   "situation": "Ibrahim (5 years old) screams in center sessions to get the attention of those around him. The supervisor's plan calls for Extinction, meaning we do not pay attention to his screaming, and we do pay attention when he asks with words.\nThe technician records the number of screams each day in a session of fixed length. Before the plan started, in Baseline, he recorded 6, then 7, then 6 screams. After the plan started he recorded 9, then 11, then 8, then 5, then 3.\nOn the second day of the plan, the supervisor attended and recorded in parallel with the technician. The technician recorded 11 screams and the supervisor recorded 8.",
    "chart": {
     "labels": [
      "BL 1",
@@ -761,10 +777,9 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "What type of measurement did we use? When do we need Rate?",
+     "t": "What type of measurement did we use?",
      "terms": [
-      "freq",
-      "rate"
+      "freq"
      ]
     },
     {
@@ -781,19 +796,14 @@ window.MAP_EN = {
      ]
     }
    ],
-   "follow": {
-    "t": "What would you change in the graph if we had no baseline?",
-    "terms": [
-     "baseline"
-    ]
-   }
+   "follow": null
   },
   {
    "n": 7,
    "session": 4,
-   "short": "Ahmed and Putting on the Jacket",
+   "short": "Ibrahim and Putting on the Jacket",
    "tag": "Path 2 · Chaining and the Discriminative Stimulus",
-   "situation": "Ahmed (6 years old) is learning to put on his jacket by himself before going to school. The supervisor broke the task down into 6 steps: take the jacket, put in the right arm, put in the left arm, adjust it on the shoulders, join the two ends of the zipper, and pull the zipper up.\nAt the start of training, the technician performed the first five steps with Ahmed and left the last step for him, then reinforced.\nTwo weeks later the supervisor asked Ahmed to put on the jacket without help to see his level, and he completed 4 of the 6 steps on his own.",
+   "situation": "Ibrahim (6 years old) is learning to put on his jacket by himself before going to school. The supervisor broke the task down into 6 steps: take the jacket, put in the right arm, put in the left arm, adjust it on the shoulders, join the two ends of the zipper, and pull the zipper up.\nAt the start of training, the technician performed the first five steps with Ibrahim and left the last step for him, then reinforced.\nTwo weeks later the supervisor asked Ibrahim to put on the jacket without help to see his level, and he completed 4 of the 6 steps on his own.",
    "chart": null,
    "q": [
     {
@@ -839,9 +849,9 @@ window.MAP_EN = {
   {
    "n": 8,
    "session": 4,
-   "short": "Ahmed Between the Clinic and Home",
+   "short": "Asma Between the Clinic and Home",
    "tag": "Paths 2, 4 and 5 · Generalization and Maintenance",
-   "situation": "In the clinic room, during intensive sessions with his first therapist, Ahmed (5 years old) learned to say \"I want water\" when she holds up a blue cup.\nTwo weeks later his mother noticed that at home he does not say the sentence; instead he pulls her by the hand to the kitchen. And at the clinic, when another therapist offered him a red cup, Ahmed waited and did not speak.\nTwo months after the intensive sessions ended, Ahmed's use of the sentence decreased, even with the first therapist.",
+   "situation": "In the clinic room, during intensive sessions with her first therapist, Asma (5 years old) learned to say \"I want water\" when the therapist holds up a blue cup.\nTwo weeks later her mother noticed that at home Asma does not ask with a sentence; instead she pulls her mother by the hand to the kitchen. And at the clinic, when another therapist offered her a red cup, Asma waited and did not ask.\nTwo months after the intensive sessions ended, Asma's use of the sentence decreased, even with the first therapist.",
    "chart": null,
    "q": [
     {
@@ -858,7 +868,7 @@ window.MAP_EN = {
      ]
     },
     {
-     "t": "What is Maintenance? What happened to Ahmed's skill?",
+     "t": "What is Maintenance? What happened to Asma's skill?",
      "terms": [
       "maint"
      ]
@@ -879,7 +889,7 @@ window.MAP_EN = {
     }
    ],
    "follow": {
-    "t": "What sentence do we write in the session notes about Ahmed's performance at home?",
+    "t": "What sentence do we write in the session notes about Asma's performance at home?",
     "terms": [
      "notes"
     ]
@@ -888,56 +898,45 @@ window.MAP_EN = {
   {
    "n": 9,
    "session": 4,
-   "short": "Ahmed and the Bruise",
-   "tag": "Path 5 · Scope of Role",
-   "situation": "During a session at Ahmed's home (5 years old), the technician notices a new bruise on his forearm and does not know the cause. The mother notices that he is looking at it, and says to him: \"Don't write anything about this in your notes.\"\nThen she asks him to reduce the number of stars in the Token Economy from 5 to 3, because she thinks Ahmed is tired today.",
+   "short": "Yazan and Extinction",
+   "tag": "Path 3 · Function Determines the Procedure",
+   "situation": "Yazan (4 years old) is a child at an early intervention center, and an Applied Behavior Analysis Technician (ABAT) named Rana works with him. Yazan used to scream \"Miss! Miss!\" whenever Rana was busy recording data, and she would turn to him and talk to him. Rana recorded 10 screaming episodes in the session.\nThe supervisor carried out a Functional Behavior Assessment (FBA), and the result was that the function of the screaming is to get Attention. The supervisor wrote three things in the Behavior Intervention Plan (BIP): Attention Extinction, meaning no one looks at Yazan or talks to him when he screams. Teaching a Replacement Behavior: touching Rana's arm and saying \"Look at me.\" And reinforcing this replacement behavior immediately.\nRana started the plan, and the screaming fell in the first two days to 8, then 7 episodes. On the third day a colleague from the room came in and heard Yazan screaming, and said to him: \"Sweetheart, what's wrong?\" and gave him attention. From day four to day ten the screaming stayed between 6 and 8 episodes per session, even though Rana followed the plan every day.\nThe supervisor met with everyone who works with Yazan and explained the plan to them, and everyone committed to it. In the third week the screaming fell to one episode per session.",
    "chart": null,
    "q": [
     {
-     "t": "What does the technician do about the bruise?",
+     "t": "What was withheld from Yazan? Why isn't it enough to just ignore the screaming without knowing its Function of Behavior?",
      "terms": [
-      "reporting",
-      "scope"
+      "ext",
+      "functions",
+      "fba"
      ]
     },
     {
-     "t": "Does he reduce the stars at the mother's request?",
+     "t": "What mistake happened on the third day? What type of Schedule of Reinforcement resulted from it?",
      "terms": [
-      "scope",
+      "inter",
+      "posr"
+     ]
+    },
+    {
+     "t": "Why did the screaming stay at 6 to 8 episodes even though Rana followed the plan? Name this phenomenon.",
+     "terms": [
+      "resist",
+      "inter",
+      "ext"
+     ]
+    },
+    {
+     "t": "What is the role of the replacement behavior \"Look at me\" in the plan? And why did the supervisor meet with all the staff?",
+     "terms": [
+      "replace",
+      "dra",
       "bip",
-      "supervision",
-      "token"
-     ]
-    },
-    {
-     "t": "How does he respond to the mother tactfully?",
-     "terms": [
-      "scope",
       "supervision"
-     ]
-    },
-    {
-     "t": "What does he write in the Session Notes?",
-     "terms": [
-      "notes",
-      "notes_lang"
-     ]
-    },
-    {
-     "t": "What does the technician not do in this situation?",
-     "terms": [
-      "scope",
-      "conf",
-      "qaba"
      ]
     }
    ],
-   "follow": {
-    "t": "What if the supervisor does not reply within the day?",
-    "terms": [
-     "reporting"
-    ]
-   }
+   "follow": null
   }
  ]
 };

@@ -6,7 +6,7 @@ window.GROUPS = [
       { id: 'ctl', ar: 'الضبط بالمثير', en: 'Stimulus Control' },
       { id: 'mot', ar: 'الدافعية', en: 'Motivation' }
     ] },
-  { id: 's', ar: 'الاستراتيجيات', en: 'Teaching Strategies', q: 'كيف نعلّم؟',
+  { id: 's', ar: 'اكتساب المهارات', en: 'Skill Acquisition', q: 'كيف نعلّم؟',
     clusters: [
       { id: 'rf', ar: 'التعزيز في التعليم', en: 'Reinforcement in Teaching' },
       { id: 'pr', ar: 'التلقين والتلاشي', en: 'Prompting and Fading' },
@@ -34,7 +34,7 @@ window.GROUPS = [
 ];
 
 window.PATHS = [
-  { id: 1, short: 'من المبدأ إلى خفض المشكلة', ar: 'من المبدأ إلى الاستراتيجية إلى خفض المشكلة',
+  { id: 1, short: 'من المبدأ إلى خفض المشكلة', ar: 'من المبدأ إلى المهارة إلى خفض المشكلة',
     line: 'التعزيز يبني المهارة، وهو نفسه ما يُبقي المشكلة. الاقتران يصنع المعزز الشرطي، والاقتصاد الرمزي يستخدمه، وتحديد الوظيفة يخبرنا أي سلوك بديل نعزز.',
     ids: ['reinf', 'us', 'cs', 'pairing', 'creinf', 'token', 'functions', 'dra'] },
   { id: 2, short: 'التلقين والمفاهيم الأساسية', ar: 'التلقين وعلاقته بالمفاهيم الأساسية',

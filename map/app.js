@@ -6,7 +6,7 @@
   // UI texts: [Arabic, English]
   var UI = {
     tabMain: ['الخريطة الرئيسية', 'Main Map'],
-    tabSc: ['السيناريوهات', 'Scenarios'],
+    tabSc: ['تطبيقات عملية', 'Practical Applications'],
     pathsLbl: ['الممرات: اختر ممراً لترى كيف تترابط المصطلحات', 'Pathways: choose a pathway to see how the terms connect'],
     pathOff: ['إيقاف الممر', 'Turn off pathway'],
     closeAll: ['إغلاق كل الفروع', 'Collapse all branches'],
@@ -22,7 +22,7 @@
     session: ['الجلسة ', 'Session '],
     questions: ['الأسئلة', 'Questions'],
     extra: ['سؤال إضافي للنقاش', 'Extra discussion question'],
-    scenTitle: ['سيناريوهات المناقشة', 'Discussion Scenarios'],
+    scenTitle: ['تطبيقات عملية', 'Practical Applications'],
     scenIntro: ['اقرأ السيناريو، وأجب عن أسئلته، ثم نناقش الإجابات معاً على الخريطة.', 'Read the scenario, answer its questions, then we will discuss the answers together on the map.'],
     guideTitle: ['كيف تستخدم الخريطة؟', 'How to use the map'],
     guide1: ['اختر فرعاً من المجموعات الأربع لتظهر مصطلحاته.', 'Choose a branch in one of the four groups to show its terms.'],
@@ -192,7 +192,7 @@
           '<p class="stag">' + u('session') + s.session + ' · ' + esc(s.tag) + '</p></div></header>' +
           '<p class="situ">' + esc(s.situation) + '</p>' + (s.chart ? chartSvg(s.chart) : '') +
           '<h4>' + u('questions') + '</h4><ol class="qs">' + s.q.map(function (q, i) { return qblock(s.n + '-' + i, i + 1, q, false); }).join('') + '</ol>' +
-          '<h4>' + u('extra') + '</h4><ol class="qs">' + qblock(s.n + '-x', 0, s.follow, true) + '</ol></article>';
+          (s.follow ? '<h4>' + u('extra') + '</h4><ol class="qs">' + qblock(s.n + '-x', 0, s.follow, true) + '</ol>' : '') + '</article>';
       }).join('') + '</div>';
   }
 
