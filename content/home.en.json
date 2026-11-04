@@ -37,24 +37,7 @@
     "cta_primary": "Start Your Career",
     "cta_secondary": "View Programs"
   },
-  "stats": [
-    {
-      "number": "40",
-      "label": "Hours of theory"
-    },
-    {
-      "number": "15",
-      "label": "Hours of supervised practice"
-    },
-    {
-      "number": "30",
-      "label": "Trainees in year one"
-    },
-    {
-      "number": "1:36",
-      "label": "1 in 36 children has autism"
-    }
-  ],
+  "stats": [],
   "about": {
     "eyebrow": "About",
     "title": "Training built on scientific foundations",
@@ -249,16 +232,16 @@
     "description": "Our training programs are delivered by an organization officially recognized by the QABA American board as an Approved Coursework/Training Provider."
   },
   "contact": {
-    "whatsapp_url": "https://wa.me/966551538431",
-    "whatsapp_display": "WhatsApp: +966 55 153 8431",
+    "whatsapp_url": "https://wa.me/963964887612",
+    "whatsapp_display": "WhatsApp: +963964887612",
     "email": "info@aba-demy.com",
     "email_href": "mailto:info@aba-demy.com",
-    "phone_display": "+966 55 153 8431",
-    "phone_href": "tel:+966551538431",
+    "phone_display": "+963964887612",
+    "phone_href": "tel:+963964887612",
     "facebook_url": "",
     "instagram_url": "https://www.instagram.com/aba.demy",
     "linkedin_url": "",
-    "whatsapp_number": "966551538431"
+    "whatsapp_number": "963964887612"
   },
   "about_page": {
     "eyebrow": "About Us",

@@ -37,24 +37,7 @@
     "cta_primary": "ابدأ رحلتك المهنية",
     "cta_secondary": "تعرّف على البرامج"
   },
-  "stats": [
-    {
-      "number": "40",
-      "label": "ساعة تدريب نظري"
-    },
-    {
-      "number": "15",
-      "label": "ساعة إشراف عملي"
-    },
-    {
-      "number": "30",
-      "label": "متدرب في السنة الأولى"
-    },
-    {
-      "number": "1:36",
-      "label": "طفل واحد من كل 36 مصاب بالتوحد"
-    }
-  ],
+  "stats": [],
   "about": {
     "eyebrow": "عن الأكاديمية",
     "title": "منصة تدريب تبني الكفاءة على أساس علمي",
@@ -249,16 +232,16 @@
     "description": "برامجنا التدريبية مقدَّمة من جهة معتمدة رسميًا من البورد الأمريكي QABA كمزوّد تدريب معتمد."
   },
   "contact": {
-    "whatsapp_url": "https://wa.me/966551538431",
+    "whatsapp_url": "https://wa.me/963964887612",
     "whatsapp_display": "واتساب: 8431 153 55 966+",
     "email": "info@aba-demy.com",
     "email_href": "mailto:info@aba-demy.com",
-    "phone_display": "+966 55 153 8431",
-    "phone_href": "tel:+966551538431",
+    "phone_display": "+963964887612",
+    "phone_href": "tel:+963964887612",
     "facebook_url": "",
     "instagram_url": "https://www.instagram.com/aba.demy",
     "linkedin_url": "",
-    "whatsapp_number": "966551538431"
+    "whatsapp_number": "963964887612"
   },
   "about_page": {
     "eyebrow": "عن الأكاديمية",
