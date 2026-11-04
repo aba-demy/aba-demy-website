@@ -5,7 +5,7 @@
 
 (function () {
     var CART_KEY = 'aba-demy-cart';
-    var DEFAULT_WHATSAPP = '966551538431';
+    var DEFAULT_WHATSAPP = '963964887612';
     function whatsappNumber() {
         var c = window.ABA_CONTENT;
         var n = c && c.contact && c.contact.whatsapp_number;

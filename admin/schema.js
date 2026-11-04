@@ -145,7 +145,6 @@
       fields: [
         h('بيانات التواصل'),
         { k: 'contact.whatsapp_number', l: 'رقم واتساب (أرقام فقط مع رمز الدولة، بدون + أو مسافات)', t: 'text', shared: true, digits: true },
-        t('contact.whatsapp_display', 'نص رقم واتساب كما يظهر في الموقع'),
         { k: 'contact.email', l: 'البريد الإلكتروني', t: 'text', shared: true },
         t('contact.phone_display', 'رقم الهاتف كما يظهر (مع رمز الدولة، مثال: ‎+966 55 153 8431)'),
         { k: 'contact.instagram_url', l: 'رابط إنستغرام (اتركه فارغًا لإخفاء الأيقونة)', t: 'url', shared: true },
