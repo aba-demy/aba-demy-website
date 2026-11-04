@@ -171,7 +171,7 @@
         t('nav.home', 'الرئيسية'), t('nav.about', 'عن الأكاديمية'), t('nav.programs', 'البرامج'), t('nav.why', 'لماذا نحن'), t('nav.store', 'المتجر'),
         t('nav.services', 'الخدمات'), t('nav.library', 'المكتبة'), t('nav.contact', 'تواصل معنا'), t('nav.register', 'التسجيل'), t('nav.cta', 'الزر الداكن في القائمة'),
         h('اسم الأكاديمية والتذييل'),
-        t('brand.name', 'اسم الأكاديمية'), t('brand.tagline', 'الشعار'), ta('footer.tagline', 'نص التذييل'), t('footer.copyright', 'حقوق النشر')
+        t('brand.name', 'اسم الأكاديمية'), ta('footer.tagline', 'نص التذييل'), t('footer.copyright', 'حقوق النشر')
       ]
     },
     {
