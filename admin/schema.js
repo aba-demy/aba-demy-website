@@ -24,7 +24,6 @@
         h('الشريط الإعلاني (أعلى الموقع)'),
         { k: 'banner.items', l: 'الإعلانات', t: 'list', itemName: 'إعلان', fields: [t('text', 'نص الإعلان')] },
         h('القسم الأول (الواجهة)'),
-        t('hero.eyebrow', 'العنوان الصغير'),
         { k: 'hero.title_html', l: 'العنوان الكبير', t: 'html', hint: 'لبدء سطر جديد اكتب <br> في المكان المطلوب.' },
         ta('hero.paragraph', 'الفقرة'),
         t('hero.cta_primary', 'نص الزر الأول'),
