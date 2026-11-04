@@ -853,6 +853,12 @@ body.ltr .footer-logo span { font-family: 'Plus Jakarta Sans', sans-serif; }
 }
 .footer-social a:hover { background: var(--accent); }
 .footer-social svg { width: 18px; height: 18px; }
+.footer-social a.wa-logo { background: none; overflow: hidden; padding: 0; }
+.footer-social a.wa-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; transition: .2s; }
+.footer-social a.wa-logo:hover { background: none; }
+.footer-social a.wa-logo:hover img { transform: scale(1.08); }
+.contact-info-icon.wa-logo { background: none; padding: 0; overflow: hidden; }
+.contact-info-icon.wa-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 9px; display: block; }
 
 /* ==========================
    ANNOUNCEMENT BANNER
