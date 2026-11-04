@@ -353,12 +353,23 @@
         "id": "recorded-course",
         "name": "Recorded Course",
         "type": "Recorded",
-        "price": 60,
+        "price": 80,
         "location": "",
         "description": "A recorded course you can watch anytime, at your own pace, with ongoing access.",
         "badge": "",
         "icon": "#icon-workshop",
         "price_note": "/ per trainee"
+      },
+      {
+        "id": "item-hwr3r",
+        "name": "Competency Assessment- ABAT ",
+        "type": "",
+        "price": 80,
+        "price_note": "",
+        "location": "",
+        "description": "A practical assessment designed to verify the applicant’s ability to demonstrate the core skills required of an Applied Behavior Analysis Technician (ABAT), in accordance with QABA Board standards.",
+        "badge": "",
+        "icon": "#icon-practice"
       }
     ]
   },
